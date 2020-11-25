@@ -7,6 +7,6 @@ target 'testPlaygorund' do
 
   # Pods for testPlaygorund
   pod 'Google-Mobile-Ads-SDK'
-  pod 'PKHUD', '~> 5.0'
+  pod 'PKHUD'
 
 end
