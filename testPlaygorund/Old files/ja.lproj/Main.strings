@@ -1,0 +1,27 @@
+
+/* Class = "UISearchBar"; 6ZX-Vf-JiL.scopeButtonTitles[0] = "Title"; ObjectID = "6ZX-Vf-JiL"; */
+"6ZX-Vf-JiL.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; 6ZX-Vf-JiL.scopeButtonTitles[1] = "Title"; ObjectID = "6ZX-Vf-JiL"; */
+"6ZX-Vf-JiL.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "C1w-zL-E30"; */
+"C1w-zL-E30.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "h4h-dR-dqX"; */
+"h4h-dR-dqX.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "ああ"; ObjectID = "pSu-EP-KMB"; */
+"pSu-EP-KMB.title" = "ああ";
+
+/* Class = "UILabel"; text = "つくば市春日2-43-11"; ObjectID = "r21-1T-zK2"; */
+"r21-1T-zK2.text" = "つくば市春日2-43-11";
+
+/* Class = "UINavigationItem"; title = "つくば市の公園一覧"; ObjectID = "wi2-Bu-EYY"; */
+"wi2-Bu-EYY.title" = "つくば市の公園一覧";
+
+/* Class = "UILabel"; text = "かつらぎ公園"; ObjectID = "wiK-dM-k2I"; */
+"wiK-dM-k2I.text" = "かつらぎ公園";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "yLF-Jf-RHX"; */
+"yLF-Jf-RHX.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";

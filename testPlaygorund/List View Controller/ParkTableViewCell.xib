@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="ParkTableViewCell" customModule="Park_in_Tsukuba" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gHQ-1n-US6">
+                        <rect key="frame" x="16" y="8" width="128" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="gHQ-1n-US6" secondAttribute="height" multiplier="16:9" id="OW1-Yg-0TW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZP-I6-22h">
+                        <rect key="frame" x="150" y="8" width="154" height="21"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XN-up-d0K">
+                        <rect key="frame" x="150" y="35" width="154" height="12"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAp-oY-waM">
+                        <rect key="frame" x="150" y="50" width="154" height="12"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkW-70-fYb">
+                        <rect key="frame" x="150" y="65" width="154" height="12"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="LAp-oY-waM" secondAttribute="trailing" id="1Wy-mR-Mby"/>
+                    <constraint firstItem="kkW-70-fYb" firstAttribute="leading" secondItem="LAp-oY-waM" secondAttribute="leading" id="25D-zP-pON"/>
+                    <constraint firstItem="gZP-I6-22h" firstAttribute="top" secondItem="gHQ-1n-US6" secondAttribute="top" id="2RX-PP-noA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8XN-up-d0K" secondAttribute="trailing" id="683-7j-HQI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kkW-70-fYb" secondAttribute="trailing" id="Gej-vh-dF7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gZP-I6-22h" secondAttribute="trailing" id="IHl-dP-7bS"/>
+                    <constraint firstItem="gHQ-1n-US6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="IT7-0z-CNk"/>
+                    <constraint firstItem="8XN-up-d0K" firstAttribute="top" secondItem="gZP-I6-22h" secondAttribute="bottom" constant="6" id="UVE-9n-faq"/>
+                    <constraint firstItem="gHQ-1n-US6" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="Vk1-Aw-2vS"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kkW-70-fYb" secondAttribute="bottom" priority="900" constant="8" id="Wxu-xt-icU"/>
+                    <constraint firstItem="gZP-I6-22h" firstAttribute="leading" secondItem="gHQ-1n-US6" secondAttribute="trailing" constant="6" id="Ybq-oS-mLm"/>
+                    <constraint firstItem="kkW-70-fYb" firstAttribute="top" secondItem="LAp-oY-waM" secondAttribute="bottom" constant="3" id="Zb8-FG-1r8"/>
+                    <constraint firstItem="LAp-oY-waM" firstAttribute="top" secondItem="8XN-up-d0K" secondAttribute="bottom" constant="3" id="eIP-Lm-Y0z"/>
+                    <constraint firstItem="LAp-oY-waM" firstAttribute="leading" secondItem="8XN-up-d0K" secondAttribute="leading" id="hct-9a-FoP"/>
+                    <constraint firstItem="gHQ-1n-US6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kOh-Fl-Iri"/>
+                    <constraint firstItem="8XN-up-d0K" firstAttribute="leading" secondItem="gZP-I6-22h" secondAttribute="leading" id="qdf-Hi-3EC"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gHQ-1n-US6" secondAttribute="bottom" priority="750" constant="8" id="ywr-qP-aeN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="LAp-oY-waM" id="8mI-6T-0vi"/>
+                <outlet property="commentLabel" destination="8XN-up-d0K" id="Nyf-SX-gHs"/>
+                <outlet property="equipmentCountLabel" destination="kkW-70-fYb" id="HSh-U0-Mki"/>
+                <outlet property="imageThumbnailView" destination="gHQ-1n-US6" id="6gM-hT-G7o"/>
+                <outlet property="parknameLabel" destination="gZP-I6-22h" id="eXt-fK-jqq"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="116.51785714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

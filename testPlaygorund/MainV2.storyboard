@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hhh-vI-3NG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--リスト-->
+        <scene sceneID="lkf-y8-Ilm">
+            <objects>
+                <viewController id="0RJ-FA-XDy" customClass="ListViewController" customModule="Park_in_Tsukuba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WI4-Ry-YU0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sl9-hR-Ekd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LGb-CB-b62"/>
+                                    <barButtonItem systemItem="search" id="Dz9-ez-602"/>
+                                    <barButtonItem systemItem="refresh" id="lyd-d8-vzR">
+                                        <connections>
+                                            <action selector="reloadButton:" destination="0RJ-FA-XDy" id="81V-NA-VwT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="つくばの公園" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCQ-xy-9iC">
+                                <rect key="frame" x="10" y="56" width="126" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="voe-0M-Mnu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QlQ-UU-UXL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="voe-0M-Mnu" firstAttribute="leading" secondItem="QlQ-UU-UXL" secondAttribute="leading" id="RQc-Dx-1F6"/>
+                            <constraint firstItem="Sl9-hR-Ekd" firstAttribute="top" secondItem="QlQ-UU-UXL" secondAttribute="top" id="SLw-xg-iJf"/>
+                            <constraint firstItem="QlQ-UU-UXL" firstAttribute="bottom" secondItem="voe-0M-Mnu" secondAttribute="bottom" id="TNi-XZ-fHB"/>
+                            <constraint firstItem="oCQ-xy-9iC" firstAttribute="leading" secondItem="QlQ-UU-UXL" secondAttribute="leading" constant="10" id="cQr-n6-A7e"/>
+                            <constraint firstItem="voe-0M-Mnu" firstAttribute="top" secondItem="Sl9-hR-Ekd" secondAttribute="bottom" id="d0V-pZ-gh1"/>
+                            <constraint firstItem="Sl9-hR-Ekd" firstAttribute="leading" secondItem="QlQ-UU-UXL" secondAttribute="leading" id="ewI-K6-rK8"/>
+                            <constraint firstItem="QlQ-UU-UXL" firstAttribute="trailing" secondItem="voe-0M-Mnu" secondAttribute="trailing" id="gva-hp-MtY"/>
+                            <constraint firstItem="Sl9-hR-Ekd" firstAttribute="trailing" secondItem="QlQ-UU-UXL" secondAttribute="trailing" id="uhy-N7-lgL"/>
+                            <constraint firstItem="oCQ-xy-9iC" firstAttribute="top" secondItem="QlQ-UU-UXL" secondAttribute="top" constant="12" id="vx0-Kg-WBh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="リスト" image="1.circle.fill" catalog="system" id="kdQ-YE-K4B"/>
+                    <connections>
+                        <outlet property="parkListTableView" destination="voe-0M-Mnu" id="o6B-QE-tIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMw-cv-ylW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="-347"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2Xk-8m-23B">
+            <objects>
+                <viewController id="d4k-bE-8tl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETJ-N2-des">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ejW-3n-a9T"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="rEK-7o-9Ob"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gih-Ie-enE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="337"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="ioq-6c-E94">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Hhh-vI-3NG" customClass="MainTabBarController" customModule="Park_in_Tsukuba" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tN0-Il-uGy">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0RJ-FA-XDy" kind="relationship" relationship="viewControllers" id="Oln-GU-K2r"/>
+                        <segue destination="d4k-bE-8tl" kind="relationship" relationship="viewControllers" id="gFj-Im-3n5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgX-to-CVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771.01449275362324" y="28.794642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

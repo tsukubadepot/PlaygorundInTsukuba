@@ -8,5 +8,8 @@ target 'testPlaygorund' do
   # Pods for testPlaygorund
   pod 'Google-Mobile-Ads-SDK'
   pod 'PKHUD'
-
+  pod 'NCMB', :git => 'https://github.com/NIFCLOUD-mbaas/ncmb_swift.git'
+  pod 'Kingfisher'
+  # pod 'IHKeyboardAvoiding'
+  pod 'FSPagerView'
 end

@@ -1,4 +1,5 @@
 PODS:
+  - FSPagerView (0.8.3)
   - Google-Mobile-Ads-SDK (7.68.0):
     - GoogleAppMeasurement (~> 7.0)
     - GoogleUserMessagingPlatform (~> 1.1)
@@ -26,37 +27,58 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.1.1)"
   - GoogleUtilities/Reachability (7.1.1):
     - GoogleUtilities/Logger
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
     - nanopb/encode (= 2.30906.0)
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
+  - NCMB (1.1.2)
   - PKHUD (5.3.0)
   - PromisesObjC (1.2.11)
 
 DEPENDENCIES:
+  - FSPagerView
   - Google-Mobile-Ads-SDK
+  - Kingfisher
+  - NCMB (from `https://github.com/NIFCLOUD-mbaas/ncmb_swift.git`)
   - PKHUD
 
 SPEC REPOS:
   trunk:
+    - FSPagerView
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
+    - Kingfisher
     - nanopb
     - PKHUD
     - PromisesObjC
 
+EXTERNAL SOURCES:
+  NCMB:
+    :git: https://github.com/NIFCLOUD-mbaas/ncmb_swift.git
+
+CHECKOUT OPTIONS:
+  NCMB:
+    :commit: be8833647e6b4f4ab154bbd849929692349cb418
+    :git: https://github.com/NIFCLOUD-mbaas/ncmb_swift.git
+
 SPEC CHECKSUMS:
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   Google-Mobile-Ads-SDK: 29bbdb182d69ff606cc0301da1590b40be8d2205
   GoogleAppMeasurement: 89e1a64593f968713b0506ba1b53b38a154bf9a5
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
+  NCMB: 71a6dc3bce6124739ef9d287fb8811664ae0968b
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: d4147dd3ff85a264f5c0b5db8311b5f726758ac2
+PODFILE CHECKSUM: 3cf2a7fecdb68932363d1d04e53be4b3c24bed74
 
 COCOAPODS: 1.10.0

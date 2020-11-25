@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91D9F21E7E36FAF0DDB4749D /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518877C43E06955D0FA11C91 /* Pods_testPlaygorund.framework */; };
-		BF83BF97256DD8D100ADC4BC /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83BF96256DD8D100ADC4BC /* APIKey.swift */; };
+		BF0EA788256DE6B300609287 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA787256DE6B300609287 /* APIKey.swift */; };
+		BF0EA7A6256DEE0000609287 /* MainV2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA7A5256DEE0000609287 /* MainV2.storyboard */; };
+		BF0EA7B9256DF19400609287 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7B8256DF19400609287 /* MainTabBarController.swift */; };
+		BF0EA7BF256E1AB300609287 /* ParkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7BE256E1AB300609287 /* ParkInfo.swift */; };
+		BF0EA7E9256E1CC400609287 /* ParkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7E8256E1CC400609287 /* ParkModel.swift */; };
+		BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7EC256E21C900609287 /* ListViewController.swift */; };
+		BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */; };
+		BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */; };
 		BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2023FBFE1400E17320 /* StringExtensions.swift */; };
 		BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2223FBFFF600E17320 /* XLSHandling.swift */; };
 		BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */; };
@@ -19,15 +25,23 @@
 		BFB7BE8D23F4275F00A89A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */; };
 		BFB7BE9623F42F6400A89A3D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = BFB7BE9523F42F6400A89A3D /* CoreXLSX */; };
 		BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */; };
+		F2C73E3601F99F5D3EC16EA8 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		518877C43E06955D0FA11C91 /* Pods_testPlaygorund.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlaygorund.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B2944B65F48D3F8F34999D9 /* Pods-testPlaygorund.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.release.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.release.xcconfig"; sourceTree = "<group>"; };
-		BAF2FE784075E61EE1CEB15F /* Pods-testPlaygorund.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.debug.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.debug.xcconfig"; sourceTree = "<group>"; };
-		BF83BF96256DD8D100ADC4BC /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
-		BFA19E2023FBFE1400E17320 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = SOURCE_ROOT; };
-		BFA19E2223FBFFF600E17320 /* XLSHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLSHandling.swift; sourceTree = SOURCE_ROOT; };
+		535A45689F13217CFC06C81D /* Pods-testPlaygorund.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.debug.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.debug.xcconfig"; sourceTree = "<group>"; };
+		B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlaygorund.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA824CF07646F29DF8232CE /* Pods-testPlaygorund.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.release.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.release.xcconfig"; sourceTree = "<group>"; };
+		BF0EA787256DE6B300609287 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		BF0EA7A5256DEE0000609287 /* MainV2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainV2.storyboard; sourceTree = "<group>"; };
+		BF0EA7B8256DF19400609287 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BF0EA7BE256E1AB300609287 /* ParkInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkInfo.swift; sourceTree = "<group>"; };
+		BF0EA7E8256E1CC400609287 /* ParkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkModel.swift; sourceTree = "<group>"; };
+		BF0EA7EC256E21C900609287 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = "testPlaygorund/List View Controller/ListViewController.swift"; sourceTree = SOURCE_ROOT; };
+		BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
+		BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkTableViewCell.xib; sourceTree = "<group>"; };
+		BFA19E2023FBFE1400E17320 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "testPlaygorund/Old files/StringExtensions.swift"; sourceTree = SOURCE_ROOT; };
+		BFA19E2223FBFFF600E17320 /* XLSHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XLSHandling.swift; path = "testPlaygorund/Old files/XLSHandling.swift"; sourceTree = SOURCE_ROOT; };
 		BFB7BE7D23F4275C00A89A3D /* Park in Tsukuba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Park in Tsukuba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB7BE8223F4275C00A89A3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +50,7 @@
 		BFB7BE8923F4275F00A89A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFB7BE8C23F4275F00A89A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFB7BE8E23F4275F00A89A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaygroundDetailViewController.swift; path = "testPlaygorund/Old files/PlaygroundDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BFB7BE9923F4737000A89A3D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		BFB7BE9A23F4737000A89A3D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,7 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB7BE9623F42F6400A89A3D /* CoreXLSX in Frameworks */,
-				91D9F21E7E36FAF0DDB4749D /* Pods_testPlaygorund.framework in Frameworks */,
+				F2C73E3601F99F5D3EC16EA8 /* Pods_testPlaygorund.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,18 +71,57 @@
 		6851BBEF3689EA6DD2DB460D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BAF2FE784075E61EE1CEB15F /* Pods-testPlaygorund.debug.xcconfig */,
-				5B2944B65F48D3F8F34999D9 /* Pods-testPlaygorund.release.xcconfig */,
+				535A45689F13217CFC06C81D /* Pods-testPlaygorund.debug.xcconfig */,
+				BCA824CF07646F29DF8232CE /* Pods-testPlaygorund.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		6E5DD6EFA4977C7E9C1BA6B4 /* Frameworks */ = {
+		BEF42BBAF116766BD81333C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				518877C43E06955D0FA11C91 /* Pods_testPlaygorund.framework */,
+				B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF0EA7A3256DED4F00609287 /* Old files */ = {
+			isa = PBXGroup;
+			children = (
+				BFA19E2223FBFFF600E17320 /* XLSHandling.swift */,
+				BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */,
+				BFA19E2023FBFE1400E17320 /* StringExtensions.swift */,
+				BFB7BE8423F4275C00A89A3D /* ViewController.swift */,
+				BFB7BE8623F4275C00A89A3D /* Main.storyboard */,
+			);
+			path = "Old files";
+			sourceTree = "<group>";
+		};
+		BF0EA7BC256E1A7D00609287 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF0EA7B8256DF19400609287 /* MainTabBarController.swift */,
+			);
+			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		BF0EA7BD256E1A9600609287 /* Park Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF0EA7BE256E1AB300609287 /* ParkInfo.swift */,
+				BF0EA7E8256E1CC400609287 /* ParkModel.swift */,
+			);
+			path = "Park Model";
+			sourceTree = "<group>";
+		};
+		BF0EA7EB256E219A00609287 /* List View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF0EA7EC256E21C900609287 /* ListViewController.swift */,
+				BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */,
+				BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */,
+			);
+			path = "List View Controller";
 			sourceTree = "<group>";
 		};
 		BFB7BE7423F4275C00A89A3D = {
@@ -77,7 +130,7 @@
 				BFB7BE7F23F4275C00A89A3D /* testPlaygorund */,
 				BFB7BE7E23F4275C00A89A3D /* Products */,
 				6851BBEF3689EA6DD2DB460D /* Pods */,
-				6E5DD6EFA4977C7E9C1BA6B4 /* Frameworks */,
+				BEF42BBAF116766BD81333C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,17 +145,17 @@
 		BFB7BE7F23F4275C00A89A3D /* testPlaygorund */ = {
 			isa = PBXGroup;
 			children = (
-				BFA19E2223FBFFF600E17320 /* XLSHandling.swift */,
-				BFA19E2023FBFE1400E17320 /* StringExtensions.swift */,
-				BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */,
+				BF0EA7BC256E1A7D00609287 /* Tab Bar Controller */,
+				BF0EA7BD256E1A9600609287 /* Park Model */,
+				BF0EA7EB256E219A00609287 /* List View Controller */,
+				BF0EA787256DE6B300609287 /* APIKey.swift */,
 				BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */,
 				BFB7BE8223F4275C00A89A3D /* SceneDelegate.swift */,
-				BFB7BE8423F4275C00A89A3D /* ViewController.swift */,
-				BFB7BE8623F4275C00A89A3D /* Main.storyboard */,
+				BF0EA7A5256DEE0000609287 /* MainV2.storyboard */,
 				BFB7BE8923F4275F00A89A3D /* Assets.xcassets */,
 				BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */,
 				BFB7BE8E23F4275F00A89A3D /* Info.plist */,
-				BF83BF96256DD8D100ADC4BC /* APIKey.swift */,
+				BF0EA7A3256DED4F00609287 /* Old files */,
 			);
 			path = testPlaygorund;
 			sourceTree = "<group>";
@@ -114,11 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFB7BE9123F4275F00A89A3D /* Build configuration list for PBXNativeTarget "testPlaygorund" */;
 			buildPhases = (
-				6497B9CA40822D1FBFAB6B07 /* [CP] Check Pods Manifest.lock */,
+				B839DDAF5020BE906806E457 /* [CP] Check Pods Manifest.lock */,
 				BFB7BE7923F4275C00A89A3D /* Sources */,
 				BFB7BE7A23F4275C00A89A3D /* Frameworks */,
 				BFB7BE7B23F4275C00A89A3D /* Resources */,
-				95A2DC774228124E625F1D8A /* [CP] Embed Pods Frameworks */,
+				976E1225EC3F4311324A3FF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,7 +201,7 @@
 				};
 			};
 			buildConfigurationList = BFB7BE7823F4275C00A89A3D /* Build configuration list for PBXProject "testPlaygorund" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -175,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB7BE8D23F4275F00A89A3D /* LaunchScreen.storyboard in Resources */,
+				BF0EA7A6256DEE0000609287 /* MainV2.storyboard in Resources */,
+				BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */,
 				BFB7BE8A23F4275F00A89A3D /* Assets.xcassets in Resources */,
 				BFB7BE8823F4275C00A89A3D /* Main.storyboard in Resources */,
 			);
@@ -183,7 +238,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6497B9CA40822D1FBFAB6B07 /* [CP] Check Pods Manifest.lock */ = {
+		976E1225EC3F4311324A3FF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B839DDAF5020BE906806E457 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,23 +277,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95A2DC774228124E625F1D8A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,7 +285,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */,
-				BF83BF97256DD8D100ADC4BC /* APIKey.swift in Sources */,
+				BF0EA7E9256E1CC400609287 /* ParkModel.swift in Sources */,
+				BF0EA7BF256E1AB300609287 /* ParkInfo.swift in Sources */,
+				BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */,
+				BF0EA788256DE6B300609287 /* APIKey.swift in Sources */,
+				BF0EA7B9256DF19400609287 /* MainTabBarController.swift in Sources */,
+				BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */,
 				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
 				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,
@@ -384,18 +444,18 @@
 		};
 		BFB7BE9223F4275F00A89A3D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAF2FE784075E61EE1CEB15F /* Pods-testPlaygorund.debug.xcconfig */;
+			baseConfigurationReference = 535A45689F13217CFC06C81D /* Pods-testPlaygorund.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 2.0.0;
 				DEVELOPMENT_TEAM = 872HCG8AJ3;
 				INFOPLIST_FILE = testPlaygorund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TsukubaDepot.net.testPlaygorund;
 				PRODUCT_NAME = "Park in Tsukuba";
 				SWIFT_VERSION = 5.0;
@@ -405,18 +465,18 @@
 		};
 		BFB7BE9323F4275F00A89A3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B2944B65F48D3F8F34999D9 /* Pods-testPlaygorund.release.xcconfig */;
+			baseConfigurationReference = BCA824CF07646F29DF8232CE /* Pods-testPlaygorund.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 2.0.0;
 				DEVELOPMENT_TEAM = 872HCG8AJ3;
 				INFOPLIST_FILE = testPlaygorund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TsukubaDepot.net.testPlaygorund;
 				PRODUCT_NAME = "Park in Tsukuba";
 				SWIFT_VERSION = 5.0;
