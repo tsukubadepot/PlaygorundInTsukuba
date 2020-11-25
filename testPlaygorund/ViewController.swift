@@ -144,14 +144,11 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
         playgroundTableView.delegate = self
         
         // AdMob
-        // アプリ ID: ca-app-pub-6832027367559530~5178001767
-        // -> Info.plist の GADApplicationIdentifier に設定する
-        // ユニットID(メイン画面): ca-app-pub-6832027367559530/3800506765
-        bannerView.adUnitID = "ca-app-pub-6832027367559530/3800506765"
+        bannerView.adUnitID = adUnitID
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
 //        // デバッグ用
-//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["e4835709a28652bd6fd01016f9dc839d"]
+//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = testDeviceIdentifiers
         
         // データのダウンロード -> viewDidAppear() でダウンロードする
         

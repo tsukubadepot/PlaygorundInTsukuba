@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		91D9F21E7E36FAF0DDB4749D /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518877C43E06955D0FA11C91 /* Pods_testPlaygorund.framework */; };
+		BF83BF97256DD8D100ADC4BC /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83BF96256DD8D100ADC4BC /* APIKey.swift */; };
 		BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2023FBFE1400E17320 /* StringExtensions.swift */; };
 		BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2223FBFFF600E17320 /* XLSHandling.swift */; };
 		BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 		518877C43E06955D0FA11C91 /* Pods_testPlaygorund.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlaygorund.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2944B65F48D3F8F34999D9 /* Pods-testPlaygorund.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.release.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.release.xcconfig"; sourceTree = "<group>"; };
 		BAF2FE784075E61EE1CEB15F /* Pods-testPlaygorund.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.debug.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.debug.xcconfig"; sourceTree = "<group>"; };
+		BF83BF96256DD8D100ADC4BC /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		BFA19E2023FBFE1400E17320 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = SOURCE_ROOT; };
 		BFA19E2223FBFFF600E17320 /* XLSHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLSHandling.swift; sourceTree = SOURCE_ROOT; };
 		BFB7BE7D23F4275C00A89A3D /* Park in Tsukuba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Park in Tsukuba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 				BFB7BE8923F4275F00A89A3D /* Assets.xcassets */,
 				BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */,
 				BFB7BE8E23F4275F00A89A3D /* Info.plist */,
+				BF83BF96256DD8D100ADC4BC /* APIKey.swift */,
 			);
 			path = testPlaygorund;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */,
+				BF83BF97256DD8D100ADC4BC /* APIKey.swift in Sources */,
 				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
 				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,
