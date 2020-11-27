@@ -36,6 +36,13 @@ class DetailViewController: UIViewController {
         }
     }
     
+    // MARK: - 設備情報
+    @IBOutlet weak var parkingImageView: UIImageView!
+    @IBOutlet weak var toiletImageView: UIImageView!
+    @IBOutlet weak var multiPurposeImageView: UIImageView!
+    @IBOutlet weak var storeImageView: UIImageView!
+    @IBOutlet weak var venderImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +55,31 @@ class DetailViewController: UIViewController {
         
         // 公園の簡単な紹介
         commentLabel.text = park.comments.comment
+        
+        parkingImageView.image = UIImage(named: "parking")
+        if park.facilities.parking == 0 {
+            parkingImageView.layer.opacity = 0.5
+        }
+        
+        toiletImageView.image = UIImage(named: "toilet")
+        if park.facilities.toilet == 0 {
+            toiletImageView.layer.opacity = 0.5
+        }
+        
+        multiPurposeImageView.image = UIImage(named: "bf")
+        if park.facilities.multipurpose == 0 {
+            multiPurposeImageView.layer.opacity = 0.4
+        }
+        
+        storeImageView.image = UIImage(named: "shop")
+        if park.facilities.convenience == 0 {
+            storeImageView.layer.opacity = 0.5
+        }
+        
+        venderImageView.image = UIImage(named: "vender")
+        if park.facilities.vender == 0 {
+            venderImageView.layer.opacity = 0.5
+        }
         
         //        // MARK: 設備情報
         //        setFacilitiesSegment()
@@ -63,7 +95,7 @@ class DetailViewController: UIViewController {
         //        showMap()
         
     }
-    
+        
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }

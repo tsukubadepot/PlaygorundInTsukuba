@@ -83,8 +83,8 @@ class ParkModel {
         // クエリの作成
         var query = NCMBQuery.getQuery(className: "Parks")
         
-        // フィールド名 score を昇順で検索する
-        //query.order = ["-score"]
+        // フィールド名 address を降順で検索する
+        query.order = ["address"]
         // 検索上限数
         // 設定しなければ上限100件になる。
         query.limit = fetchLimit
@@ -138,5 +138,4 @@ class ParkModel {
         
         return parks[index].name
     }
-    
 }

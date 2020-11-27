@@ -29,6 +29,7 @@
 		BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */; };
 		BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A62C25710723009EED2A /* DetailViewController.swift */; };
 		BFF8A6312571198D009EED2A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */; };
+		BFF8A63525712CA0009EED2A /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */; };
 		F2C73E3601F99F5D3EC16EA8 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationMapView.swift; sourceTree = "<group>"; };
 		BFF8A62C25710723009EED2A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */,
+				BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */,
 				BF0EA7E9256E1CC400609287 /* ParkModel.swift in Sources */,
 				BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */,
+				BFF8A63525712CA0009EED2A /* CLLocationCoordinate2DExtension.swift in Sources */,
 				BF0EA7BF256E1AB300609287 /* ParkInfo.swift in Sources */,
 				BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */,
 				BF0EA788256DE6B300609287 /* APIKey.swift in Sources */,
