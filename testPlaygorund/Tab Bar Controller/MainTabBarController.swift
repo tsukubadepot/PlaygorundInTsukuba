@@ -31,35 +31,7 @@ extension MainTabBarController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ParkTableViewCell
         let park = parkModel.parks[indexPath.row]
         
-        if park.pictures.topImage.isEmpty {
-            // トップイメージが設定されていない場合
-            cell.imageThumbnailView.image = UIImage(named: "notvisit")
-            cell.imageThumbnailView.backgroundColor = .gray
-        } else {
-            // トップイメージがある場合
-            let url = URL(string: ncmbFileBaseURL + park.pictures.topImage)
-            let processor = DownsamplingImageProcessor(size: cell.imageThumbnailView.bounds.size)
-            
-            cell.imageThumbnailView.kf.indicatorType = .activity
-            cell.imageThumbnailView.kf.setImage(
-                with: url,
-                placeholder: UIImage(named: "loading-temp"),
-                options: [
-                    .processor(processor),
-                    .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(1)),
-                    .cacheOriginalImage
-                ], completionHandler:
-                    {
-                        result in
-                        switch result {
-                        case .success(let value):
-                            print("Task done for: \(value.source.url?.absoluteString ?? "")")
-                        case .failure(let error):
-                            print("Job failed: \(error.localizedDescription)")
-                        }
-                    })
-        }
+        cell.imageThumbnailView.loadImage(forName: park.pictures.topImage)
         
         cell.parknameLabel.text = park.name
         cell.addressLabel.text = park.address
@@ -78,6 +50,21 @@ extension MainTabBarController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+extension MainTabBarController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        vc.park = parkModel.parks[indexPath.row]
+        
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        
+        present(vc, animated: true, completion: nil)
     }
 }
 
@@ -119,37 +106,8 @@ extension MainTabBarController: FSPagerViewDataSource {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         
-        if park.pictures.topImage.isEmpty {
-            // 画像データがない（まだ訪問していない）公園の場合
-            
-            imageView.image = UIImage(named: "notvisit")
-            
-        } else {
-            // 訪問済みの場合には、トップ画像などを表示
-                        
-            let url = URL(string: ncmbFileBaseURL + park.pictures.topImage)
-            let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
-                        
-            imageView.kf.indicatorType = .activity
-            imageView.kf.setImage(
-                with: url,
-                placeholder: UIImage(named: "loading-temp"),
-                options: [
-                    .processor(processor),
-                    .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(1)),
-                    .cacheOriginalImage
-                ], completionHandler:
-                    {
-                        result in
-                        switch result {
-                        case .success(let value):
-                            print("Task done for: \(value.source.url?.absoluteString ?? "")")
-                        case .failure(let error):
-                            print("Job failed: \(error.localizedDescription)")
-                        }
-                    })
-        }
+        imageView.loadImage(forName: park.pictures.topImage)
+
         // 公園名
         // textLabel は最後に設定しないと ImageView の後ろになる
         cell.textLabel?.text = park.name
@@ -157,4 +115,3 @@ extension MainTabBarController: FSPagerViewDataSource {
         return cell
     }
 }
-

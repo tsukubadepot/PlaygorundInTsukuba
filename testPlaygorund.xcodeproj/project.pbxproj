@@ -27,6 +27,8 @@
 		BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */; };
 		BFF8A5DF2570A425009EED2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5DE2570A425009EED2A /* MapViewController.swift */; };
 		BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */; };
+		BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A62C25710723009EED2A /* DetailViewController.swift */; };
+		BFF8A6312571198D009EED2A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */; };
 		F2C73E3601F99F5D3EC16EA8 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		BFB7BE9A23F4737000A89A3D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BFF8A5DE2570A425009EED2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationMapView.swift; sourceTree = "<group>"; };
+		BFF8A62C25710723009EED2A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +153,12 @@
 		BFB7BE7F23F4275C00A89A3D /* testPlaygorund */ = {
 			isa = PBXGroup;
 			children = (
-				BFF8A5DC2570A3E9009EED2A /* Map View Controller */,
 				BF0EA7BC256E1A7D00609287 /* Tab Bar Controller */,
-				BF0EA7BD256E1A9600609287 /* Park Model */,
 				BF0EA7EB256E219A00609287 /* List View Controller */,
+				BFF8A5DC2570A3E9009EED2A /* Map View Controller */,
+				BFF8A62A25710586009EED2A /* Detail View Controller */,
+				BF0EA7BD256E1A9600609287 /* Park Model */,
+				BFF8A62F25711961009EED2A /* Extensions */,
 				BF0EA787256DE6B300609287 /* APIKey.swift */,
 				BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */,
 				BFB7BE8223F4275C00A89A3D /* SceneDelegate.swift */,
@@ -172,6 +178,22 @@
 				BFF8A5DE2570A425009EED2A /* MapViewController.swift */,
 			);
 			path = "Map View Controller";
+			sourceTree = "<group>";
+		};
+		BFF8A62A25710586009EED2A /* Detail View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8A62C25710723009EED2A /* DetailViewController.swift */,
+			);
+			path = "Detail View Controller";
+			sourceTree = "<group>";
+		};
+		BFF8A62F25711961009EED2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +332,9 @@
 				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
 				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,
+				BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */,
 				BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */,
+				BFF8A6312571198D009EED2A /* UIImageViewExtension.swift in Sources */,
 				BFB7BE8323F4275C00A89A3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

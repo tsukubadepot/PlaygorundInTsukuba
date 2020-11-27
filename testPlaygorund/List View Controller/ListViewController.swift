@@ -23,6 +23,7 @@ class ListViewController: UIViewController {
         let nib = UINib(nibName: String(describing: ParkTableViewCell.self), bundle: nil)
         parkListTableView.register(nib, forCellReuseIdentifier: "cell")
         parkListTableView.dataSource = mainTabBarController
+        parkListTableView.delegate = mainTabBarController
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -19,6 +19,8 @@ class MapViewController: UIViewController {
     @IBOutlet weak var annotationMapView: AnnotationMapView! {
         didSet {
             annotationMapView.delegate = self
+            annotationMapView.layer.borderColor = UIColor.gray.cgColor
+            annotationMapView.layer.borderWidth = 1
             // MapView の範囲外にある Annotation も読み込ませる
             annotationMapView.isLoadAllAnnotations = true
         }
@@ -159,16 +161,25 @@ extension MapViewController: AnnotationMapViewDelegate {
 extension MapViewController: FSPagerViewDelegate {
     // セルをタップしたら呼び出される delegate
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
-        // 同じセルをクリックすると二つの値が同じになる
         let currentIndex = pagerView.currentIndex
         
-        print(#function, index, currentIndex)
         pagerView.deselectItem(at: index, animated: true)
         
         if currentIndex != index {
-            self.pagerView.scrollToItem(at: index, animated: true)
+            pagerView.scrollToItem(at: index, animated: true)
+        } else {
+            // 同じセルをクリックすると二つの値が同じになる
+
+            // TODO: ここもリファクタリングできないか？ MainTabBarController の TableView と関連づけたい
+            let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+            
+            vc.park = parkModelController!.parkModel.parks[index]
+            
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overFullScreen
+            
+            present(vc, animated: true, completion: nil)
         }
-        // TODO: 表示済みの Annotation をタップしたら公園情報に遷移させる
     }
     
     // 自動スクロールが終了した時点で呼び出される delegate
