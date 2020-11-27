@@ -161,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-V3-Y1l">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="628"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="635.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tne-dP-HEb" userLabel="ヘッダ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
@@ -223,7 +223,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAo-dI-EPY" userLabel="設備情報">
-                                                <rect key="frame" x="0.0" y="500" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="500" width="414" height="135.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設備情報" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dn-eL-VDD">
                                                         <rect key="frame" x="16" y="6" width="382" height="17"/>
@@ -232,45 +232,100 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h1S-Ws-Cw9">
-                                                        <rect key="frame" x="24" y="29" width="366" height="93"/>
+                                                        <rect key="frame" x="24" y="29" width="366" height="100.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sRw-Gu-OXX">
-                                                                <rect key="frame" x="0.0" y="13.5" width="66" height="66"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="sRw-Gu-OXX" secondAttribute="height" id="83O-ug-qqn"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-ua-0XX">
-                                                                <rect key="frame" x="75.5" y="13.5" width="65.5" height="66"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="flJ-ua-0XX" secondAttribute="height" id="dU5-KZ-eaB"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EnK-VR-5Zz">
-                                                                <rect key="frame" x="150.5" y="13.5" width="66" height="66"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="EnK-VR-5Zz" secondAttribute="height" id="HTg-i3-M2W"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-Zl-o8R">
-                                                                <rect key="frame" x="226" y="13.5" width="65.5" height="66"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="dZu-Zl-o8R" secondAttribute="height" id="oda-KI-vCN"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-sn-knq">
-                                                                <rect key="frame" x="301" y="14" width="65" height="65"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="DJ8-sn-knq" secondAttribute="height" id="uw0-3Y-EJL"/>
-                                                                </constraints>
-                                                            </imageView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bJo-sy-87I">
+                                                                <rect key="frame" x="0.0" y="12" width="66" height="76.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sRw-Gu-OXX">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="sRw-Gu-OXX" secondAttribute="height" id="83O-ug-qqn"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="駐車場" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-xp-qwO">
+                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="F4g-d7-UEn">
+                                                                <rect key="frame" x="75" y="12" width="66" height="76.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-ua-0XX">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="flJ-ua-0XX" secondAttribute="height" id="dU5-KZ-eaB"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トイレ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-pS-WDG">
+                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nla-M5-MVi">
+                                                                <rect key="frame" x="150" y="12" width="66" height="76.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EnK-VR-5Zz">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="EnK-VR-5Zz" secondAttribute="height" id="HTg-i3-M2W"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多目的トイレ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGq-Qg-apl">
+                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZUy-gw-y1y">
+                                                                <rect key="frame" x="225" y="12" width="66" height="76.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-Zl-o8R">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="dZu-Zl-o8R" secondAttribute="height" id="oda-KI-vCN"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近隣コンビニ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-7c-w2R">
+                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-SQ-cAh">
+                                                                <rect key="frame" x="300" y="12" width="66" height="76.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-sn-knq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="DJ8-sn-knq" secondAttribute="height" id="uw0-3Y-EJL"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動販売機" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-67-hKx">
+                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="sRw-Gu-OXX" firstAttribute="width" secondItem="EnK-VR-5Zz" secondAttribute="width" id="Kh0-ME-DMr"/>
-                                                            <constraint firstItem="sRw-Gu-OXX" firstAttribute="width" secondItem="dZu-Zl-o8R" secondAttribute="width" id="Okc-BS-Aeh"/>
-                                                            <constraint firstItem="sRw-Gu-OXX" firstAttribute="width" secondItem="flJ-ua-0XX" secondAttribute="width" id="RHb-cZ-gnQ"/>
-                                                            <constraint firstItem="sRw-Gu-OXX" firstAttribute="width" secondItem="DJ8-sn-knq" secondAttribute="width" multiplier="1.01515" id="SXt-pJ-0wb"/>
-                                                            <constraint firstItem="sRw-Gu-OXX" firstAttribute="width" secondItem="h1S-Ws-Cw9" secondAttribute="width" multiplier="0.18" id="mml-Rz-U9U"/>
+                                                            <constraint firstItem="gg7-SQ-cAh" firstAttribute="width" secondItem="bJo-sy-87I" secondAttribute="width" id="D3E-Vj-PeM"/>
+                                                            <constraint firstItem="bJo-sy-87I" firstAttribute="width" secondItem="h1S-Ws-Cw9" secondAttribute="width" multiplier="0.18" id="JSE-WL-Sfz"/>
+                                                            <constraint firstItem="Nla-M5-MVi" firstAttribute="width" secondItem="bJo-sy-87I" secondAttribute="width" id="ZcK-rS-U5q"/>
+                                                            <constraint firstItem="ZUy-gw-y1y" firstAttribute="width" secondItem="bJo-sy-87I" secondAttribute="width" id="r8j-0Y-tnH"/>
+                                                            <constraint firstItem="F4g-d7-UEn" firstAttribute="width" secondItem="bJo-sy-87I" secondAttribute="width" id="rFM-Y1-q6o"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
