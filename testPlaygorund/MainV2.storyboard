@@ -63,17 +63,49 @@
             </objects>
             <point key="canvasLocation" x="325" y="-347"/>
         </scene>
-        <!--Item-->
+        <!--地図-->
         <scene sceneID="2Xk-8m-23B">
             <objects>
-                <viewController id="d4k-bE-8tl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ETJ-N2-des">
+                <viewController id="d4k-bE-8tl" customClass="MapViewController" customModule="Park_in_Tsukuba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yir-qv-C1j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ejW-3n-a9T"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94Q-N3-bnK" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="580" width="414" height="233"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="94Q-N3-bnK" secondAttribute="height" multiplier="16:9" id="D4H-g3-OSP"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MF-0s-Z8h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items/>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iDF-Bc-XWq" customClass="AnnotationMapView" customModule="Park_in_Tsukuba" customModuleProvider="target">
+                                <rect key="frame" x="16" y="94" width="382" height="486"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2qb-xW-5Mt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="94Q-N3-bnK" firstAttribute="top" secondItem="iDF-Bc-XWq" secondAttribute="bottom" id="27Z-9r-ao5"/>
+                            <constraint firstItem="94Q-N3-bnK" firstAttribute="leading" secondItem="2qb-xW-5Mt" secondAttribute="leading" id="W2X-5D-18h"/>
+                            <constraint firstItem="5MF-0s-Z8h" firstAttribute="leading" secondItem="2qb-xW-5Mt" secondAttribute="leading" id="XTU-E8-hZf"/>
+                            <constraint firstItem="2qb-xW-5Mt" firstAttribute="bottom" secondItem="94Q-N3-bnK" secondAttribute="bottom" id="f4c-Sx-eMS"/>
+                            <constraint firstItem="2qb-xW-5Mt" firstAttribute="trailing" secondItem="iDF-Bc-XWq" secondAttribute="trailing" constant="16" id="kcN-Yx-ZXD"/>
+                            <constraint firstItem="5MF-0s-Z8h" firstAttribute="top" secondItem="2qb-xW-5Mt" secondAttribute="top" id="mia-tE-KSY"/>
+                            <constraint firstItem="iDF-Bc-XWq" firstAttribute="leading" secondItem="2qb-xW-5Mt" secondAttribute="leading" constant="16" id="o7d-Ig-a9H"/>
+                            <constraint firstItem="iDF-Bc-XWq" firstAttribute="top" secondItem="5MF-0s-Z8h" secondAttribute="bottom" constant="6" id="qdR-dC-woS"/>
+                            <constraint firstAttribute="trailing" secondItem="5MF-0s-Z8h" secondAttribute="trailing" id="vxP-VZ-0qQ"/>
+                            <constraint firstItem="2qb-xW-5Mt" firstAttribute="trailing" secondItem="94Q-N3-bnK" secondAttribute="trailing" id="zQU-8s-MDN"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rEK-7o-9Ob"/>
+                    <tabBarItem key="tabBarItem" title="地図" id="rEK-7o-9Ob"/>
+                    <connections>
+                        <outlet property="annotationMapView" destination="iDF-Bc-XWq" id="YXF-9p-uLt"/>
+                        <outlet property="pagerView" destination="94Q-N3-bnK" id="4p0-1I-U4Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gih-Ie-enE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,9 +135,6 @@
         <image name="1.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

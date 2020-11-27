@@ -71,9 +71,9 @@ class ParkModel {
         }
         
         // TODO: - 一時的な処理
-        parks.sort { (park1, park2) -> Bool in
-            park1.comments.comment < park2.comments.comment
-        }
+//        parks.sort { (park1, park2) -> Bool in
+//            park1.comments.comment < park2.comments.comment
+//        }
         
         print("公園数:", parks.count)
     }
@@ -117,4 +117,26 @@ class ParkModel {
             }
         }
     }
+    
+    
+    /// 指定された公園のインデックスを返す
+    /// - Parameter parkName: 公園名
+    /// - Returns: 配列内のインデックス。公園名が存在しないときには nil
+    func index(of parkName: String) -> Int? {
+        return parks.firstIndex { parkInfo -> Bool in
+            return parkInfo.name == parkName
+        }
+    }
+    
+    /// インデックスから公園名を得る
+    /// - Parameter index: インデックス
+    /// - Returns: 公園名。インデックスが範囲外の場合には nil
+    func getParkName(of index: Int) -> String? {
+        if index < 0 || index >= parks.count {
+            return nil
+        }
+        
+        return parks[index].name
+    }
+    
 }

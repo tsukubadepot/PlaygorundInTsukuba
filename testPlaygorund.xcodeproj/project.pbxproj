@@ -25,6 +25,8 @@
 		BFB7BE8D23F4275F00A89A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */; };
 		BFB7BE9623F42F6400A89A3D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = BFB7BE9523F42F6400A89A3D /* CoreXLSX */; };
 		BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */; };
+		BFF8A5DF2570A425009EED2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5DE2570A425009EED2A /* MapViewController.swift */; };
+		BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */; };
 		F2C73E3601F99F5D3EC16EA8 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaygroundDetailViewController.swift; path = "testPlaygorund/Old files/PlaygroundDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BFB7BE9923F4737000A89A3D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		BFB7BE9A23F4737000A89A3D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BFF8A5DE2570A425009EED2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 		BFB7BE7F23F4275C00A89A3D /* testPlaygorund */ = {
 			isa = PBXGroup;
 			children = (
+				BFF8A5DC2570A3E9009EED2A /* Map View Controller */,
 				BF0EA7BC256E1A7D00609287 /* Tab Bar Controller */,
 				BF0EA7BD256E1A9600609287 /* Park Model */,
 				BF0EA7EB256E219A00609287 /* List View Controller */,
@@ -158,6 +163,15 @@
 				BF0EA7A3256DED4F00609287 /* Old files */,
 			);
 			path = testPlaygorund;
+			sourceTree = "<group>";
+		};
+		BFF8A5DC2570A3E9009EED2A /* Map View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */,
+				BFF8A5DE2570A425009EED2A /* MapViewController.swift */,
+			);
+			path = "Map View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,10 +300,12 @@
 			files = (
 				BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */,
 				BF0EA7E9256E1CC400609287 /* ParkModel.swift in Sources */,
+				BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */,
 				BF0EA7BF256E1AB300609287 /* ParkInfo.swift in Sources */,
 				BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */,
 				BF0EA788256DE6B300609287 /* APIKey.swift in Sources */,
 				BF0EA7B9256DF19400609287 /* MainTabBarController.swift in Sources */,
+				BFF8A5DF2570A425009EED2A /* MapViewController.swift in Sources */,
 				BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */,
 				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
