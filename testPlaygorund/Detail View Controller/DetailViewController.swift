@@ -56,30 +56,15 @@ class DetailViewController: UIViewController {
         // 公園の簡単な紹介
         commentLabel.text = park.comments.comment
         
-        parkingImageView.image = UIImage(named: "parking")
-        if park.facilities.parking == 0 {
-            parkingImageView.layer.opacity = 0.5
-        }
+        parkingImageView.image = park.facilities.parking == 1 ? UIImage(named: "parking") : UIImage(named: "no-parking")
         
-        toiletImageView.image = UIImage(named: "toilet")
-        if park.facilities.toilet == 0 {
-            toiletImageView.layer.opacity = 0.5
-        }
+        toiletImageView.image = park.facilities.toilet == 1 ? UIImage(named: "toilet") : UIImage(named: "no-toilet")
         
-        multiPurposeImageView.image = UIImage(named: "bf")
-        if park.facilities.multipurpose == 0 {
-            multiPurposeImageView.layer.opacity = 0.4
-        }
+        multiPurposeImageView.image = park.facilities.multipurpose == 1 ? UIImage(named: "bf") : UIImage(named: "no-bf")
         
-        storeImageView.image = UIImage(named: "shop")
-        if park.facilities.convenience == 0 {
-            storeImageView.layer.opacity = 0.5
-        }
+        storeImageView.image = park.facilities.convenience == 1 ? UIImage(named: "shop") : UIImage(named: "no-shop")
         
-        venderImageView.image = UIImage(named: "vender")
-        if park.facilities.vender == 0 {
-            venderImageView.layer.opacity = 0.5
-        }
+        venderImageView.image = park.facilities.vender == 1 ? UIImage(named: "vender") : UIImage(named: "no-vender")
         
         //        // MARK: 設備情報
         //        setFacilitiesSegment()
