@@ -30,6 +30,7 @@
 		BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A62C25710723009EED2A /* DetailViewController.swift */; };
 		BFF8A6312571198D009EED2A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */; };
 		BFF8A63525712CA0009EED2A /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */; };
+		BFF8A6382572FCDF009EED2A /* PlayEquipmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A6372572FCDE009EED2A /* PlayEquipmentTableViewCell.swift */; };
 		F2C73E3601F99F5D3EC16EA8 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		BFF8A62C25710723009EED2A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
+		BFF8A6372572FCDE009EED2A /* PlayEquipmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayEquipmentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF8A62C25710723009EED2A /* DetailViewController.swift */,
+				BFF8A6372572FCDE009EED2A /* PlayEquipmentTableViewCell.swift */,
 			);
 			path = "Detail View Controller";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				BF0EA7B9256DF19400609287 /* MainTabBarController.swift in Sources */,
 				BFF8A5DF2570A425009EED2A /* MapViewController.swift in Sources */,
 				BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */,
+				BFF8A6382572FCDF009EED2A /* PlayEquipmentTableViewCell.swift in Sources */,
 				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
 				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,

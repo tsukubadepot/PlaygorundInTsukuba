@@ -161,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-V3-Y1l">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="635.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1035.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tne-dP-HEb" userLabel="ヘッダ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
@@ -340,6 +340,61 @@
                                                     <constraint firstItem="3Dn-eL-VDD" firstAttribute="leading" secondItem="OAo-dI-EPY" secondAttribute="leading" constant="16" id="ZW3-8D-dRQ"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M14-kO-QYf" userLabel="遊具情報">
+                                                <rect key="frame" x="0.0" y="635.5" width="414" height="400"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遊具情報" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbf-lQ-IUS">
+                                                        <rect key="frame" x="16" y="6" width="382" height="294"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-dr-UlZ">
+                                                        <rect key="frame" x="24" y="306" width="366" height="88"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="88" id="6cn-bS-BIn"/>
+                                                        </constraints>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="YUP-1i-wSo" customClass="PlayEquipmentTableViewCell" customModule="Park_in_Tsukuba" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="28" width="366" height="23.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YUP-1i-wSo" id="gcT-AN-xqU">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="23.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOi-Im-O7S">
+                                                                            <rect key="frame" x="0.0" y="3" width="366" height="17.5"/>
+                                                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="bOi-Im-O7S" secondAttribute="trailing" id="35d-ra-1YJ"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="bOi-Im-O7S" secondAttribute="bottom" constant="3" id="6b3-fw-bPK"/>
+                                                                        <constraint firstItem="bOi-Im-O7S" firstAttribute="leading" secondItem="gcT-AN-xqU" secondAttribute="leading" id="TkG-iN-yDQ"/>
+                                                                        <constraint firstItem="bOi-Im-O7S" firstAttribute="top" secondItem="gcT-AN-xqU" secondAttribute="top" constant="3" id="g4y-eP-XOh"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="equipmentLabel" destination="bOi-Im-O7S" id="wdE-tg-S2L"/>
+                                                                </connections>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="sbf-lQ-IUS" secondAttribute="trailing" constant="16" id="BVt-rl-SWP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CMB-dr-UlZ" secondAttribute="trailing" constant="24" id="DdL-dU-WGL"/>
+                                                    <constraint firstItem="CMB-dr-UlZ" firstAttribute="top" secondItem="sbf-lQ-IUS" secondAttribute="bottom" constant="6" id="Qaa-Ay-qJP"/>
+                                                    <constraint firstItem="sbf-lQ-IUS" firstAttribute="leading" secondItem="M14-kO-QYf" secondAttribute="leading" constant="16" id="ReM-fx-fhd"/>
+                                                    <constraint firstItem="CMB-dr-UlZ" firstAttribute="leading" secondItem="M14-kO-QYf" secondAttribute="leading" constant="24" id="cIc-Wh-sOK"/>
+                                                    <constraint firstItem="sbf-lQ-IUS" firstAttribute="top" secondItem="M14-kO-QYf" secondAttribute="top" constant="6" id="e2O-BZ-Izp"/>
+                                                    <constraint firstAttribute="bottom" secondItem="CMB-dr-UlZ" secondAttribute="bottom" constant="6" id="fBa-Gz-c7X"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="OAo-dI-EPY" firstAttribute="top" secondItem="tne-dP-HEb" secondAttribute="bottom" id="3pC-4M-EPO"/>
@@ -372,6 +427,8 @@
                     </view>
                     <connections>
                         <outlet property="commentLabel" destination="Rqu-Mm-sOO" id="RdM-cH-6BI"/>
+                        <outlet property="equipmentTable" destination="CMB-dr-UlZ" id="0ld-ai-LQP"/>
+                        <outlet property="equipmentTableHeightConstraint" destination="6cn-bS-BIn" id="EMx-46-gfe"/>
                         <outlet property="likeButton" destination="A9P-9y-17F" id="QGV-DE-vwv"/>
                         <outlet property="multiPurposeImageView" destination="EnK-VR-5Zz" id="LnL-v9-8N6"/>
                         <outlet property="parkAddressLabel" destination="0fr-zN-taP" id="GxQ-fG-eNd"/>
