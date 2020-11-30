@@ -60,7 +60,7 @@ extension MainTabBarController: UITableViewDelegate {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
         vc.park = parkModel.parks[indexPath.row]
-        vc.modelController = self
+        vc.parkModelController = self
         
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen

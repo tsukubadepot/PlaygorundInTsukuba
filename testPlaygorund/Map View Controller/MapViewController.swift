@@ -175,7 +175,7 @@ extension MapViewController: FSPagerViewDelegate {
             let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             
             vc.park = parkModelController!.parkModel.parks[index]
-            vc.modelController = parkModelController
+            vc.parkModelController = parkModelController
             
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen

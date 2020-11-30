@@ -13,7 +13,7 @@ import MapKit
 class DetailViewController: UIViewController {
     // MARK: - local properties
     /// Model View Controller
-    var modelController: MainTabBarController!
+    weak var parkModelController: MainTabBarController!
     /// 公園情報
     var park: ParkInfo!
     
@@ -125,7 +125,7 @@ class DetailViewController: UIViewController {
         setSubImages()
         
         // 近隣地図表示
-        mapView.dataSource = modelController
+        mapView.dataSource = parkModelController
         showMap()
     }
     

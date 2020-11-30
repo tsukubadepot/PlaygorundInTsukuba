@@ -252,7 +252,7 @@
                                                                             <constraint firstAttribute="width" secondItem="sRw-Gu-OXX" secondAttribute="height" id="83O-ug-qqn"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="駐車場" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-xp-qwO">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="駐車場" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-xp-qwO">
                                                                         <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
@@ -286,7 +286,7 @@
                                                                             <constraint firstAttribute="width" secondItem="EnK-VR-5Zz" secondAttribute="height" id="HTg-i3-M2W"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多目的トイレ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGq-Qg-apl">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多目的トイレ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGq-Qg-apl">
                                                                         <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
@@ -303,7 +303,7 @@
                                                                             <constraint firstAttribute="width" secondItem="dZu-Zl-o8R" secondAttribute="height" id="oda-KI-vCN"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近隣コンビニ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-7c-w2R">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近隣コンビニ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-7c-w2R">
                                                                         <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
@@ -320,7 +320,7 @@
                                                                             <constraint firstAttribute="width" secondItem="DJ8-sn-knq" secondAttribute="height" id="uw0-3Y-EJL"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動販売機" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-67-hKx">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動販売機" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-67-hKx">
                                                                         <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
