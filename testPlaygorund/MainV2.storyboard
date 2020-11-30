@@ -92,16 +92,29 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iDF-Bc-XWq" customClass="AnnotationMapView" customModule="Park_in_Tsukuba" customModuleProvider="target">
                                 <rect key="frame" x="16" y="94" width="382" height="486"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2Z-G9-umT">
+                                <rect key="frame" x="346" y="516" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aOf-2l-0Su"/>
+                                    <constraint firstAttribute="width" constant="40" id="d59-8a-T3M"/>
+                                </constraints>
+                                <state key="normal" image="current"/>
+                                <connections>
+                                    <action selector="moveToCurrentLocation:" destination="d4k-bE-8tl" eventType="touchUpInside" id="EuF-h8-Tfd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2qb-xW-5Mt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="94Q-N3-bnK" firstAttribute="top" secondItem="iDF-Bc-XWq" secondAttribute="bottom" id="27Z-9r-ao5"/>
+                            <constraint firstItem="iDF-Bc-XWq" firstAttribute="bottomMargin" secondItem="x2Z-G9-umT" secondAttribute="bottom" constant="24" id="ER9-DA-BRk"/>
                             <constraint firstItem="94Q-N3-bnK" firstAttribute="leading" secondItem="2qb-xW-5Mt" secondAttribute="leading" id="W2X-5D-18h"/>
                             <constraint firstItem="5MF-0s-Z8h" firstAttribute="leading" secondItem="2qb-xW-5Mt" secondAttribute="leading" id="XTU-E8-hZf"/>
                             <constraint firstItem="2qb-xW-5Mt" firstAttribute="bottom" secondItem="94Q-N3-bnK" secondAttribute="bottom" id="f4c-Sx-eMS"/>
                             <constraint firstItem="KoN-aG-DOO" firstAttribute="leading" secondItem="2qb-xW-5Mt" secondAttribute="leading" constant="10" id="fli-ly-1KI"/>
                             <constraint firstItem="2qb-xW-5Mt" firstAttribute="trailing" secondItem="iDF-Bc-XWq" secondAttribute="trailing" constant="16" id="kcN-Yx-ZXD"/>
+                            <constraint firstItem="iDF-Bc-XWq" firstAttribute="trailingMargin" secondItem="x2Z-G9-umT" secondAttribute="trailing" constant="12" id="lxf-UM-l3a"/>
                             <constraint firstItem="5MF-0s-Z8h" firstAttribute="top" secondItem="2qb-xW-5Mt" secondAttribute="top" id="mia-tE-KSY"/>
                             <constraint firstItem="iDF-Bc-XWq" firstAttribute="leading" secondItem="2qb-xW-5Mt" secondAttribute="leading" constant="16" id="o7d-Ig-a9H"/>
                             <constraint firstItem="KoN-aG-DOO" firstAttribute="top" secondItem="2qb-xW-5Mt" secondAttribute="top" constant="12" id="pqx-yi-4W2"/>
@@ -118,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gih-Ie-enE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-771" y="877"/>
+            <point key="canvasLocation" x="-478" y="877"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="ioq-6c-E94">
@@ -608,6 +621,7 @@
     </scenes>
     <resources>
         <image name="1.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="current" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -15,10 +15,14 @@ import FSPagerView
 class MainTabBarController: UITabBarController {
     var parkModel = ParkModel()
     
+    var coordinateModel = Coordinate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // NCMB の初期化
         NCMB.initialize(applicationKey: applicationkey, clientKey: clientkey)
+        
+        coordinateModel.setupLocationManager()
     }
 }
 

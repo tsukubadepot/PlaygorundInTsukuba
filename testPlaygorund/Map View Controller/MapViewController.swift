@@ -73,7 +73,8 @@ class MapViewController: UIViewController {
         var mapRegion = MKCoordinateRegion()
         
         // TODO: 将来は現在地にする
-        mapRegion.center = CLLocationCoordinate2DMake(36.0874632, 140.0930501)
+        //mapRegion.center = CLLocationCoordinate2DMake(36.0874632, 140.0930501)
+        mapRegion.center = parkModelController!.coordinateModel.currentCoordinate
         
         let mapRegionSpan = 0.01
         mapRegion.span.latitudeDelta = mapRegionSpan
@@ -84,7 +85,7 @@ class MapViewController: UIViewController {
         view.addSubview(scaleView)
         view.addSubview(compassButton)
         
-        //annotationMapView.showsUserLocation = true
+        annotationMapView.showsUserLocation = true
         
     }
     
@@ -118,6 +119,12 @@ class MapViewController: UIViewController {
         
         annotationMapView.loadAllAnnotations()
     }
+    
+    @IBAction func moveToCurrentLocation(_ sender: UIButton) {
+        if let currentCoordinate = parkModelController?.coordinateModel.currentCoordinate {
+            annotationMapView.setCenter(currentCoordinate, animated: true)
+        }
+    }
 }
 
 // MARK: - AnnotationMapViewDelegate
@@ -133,10 +140,10 @@ extension MapViewController: AnnotationMapViewDelegate {
             view.markerTintColor = UIColor.green
         }
         
-        let selectedCoordination = annotation.coordinate
+        let selectedCoordinate = annotation.coordinate
         
         // アニメーションしながら選択されたピンを中心に持ってくる
-        mapView.setCenter(selectedCoordination, animated: true)
+        mapView.setCenter(selectedCoordinate, animated: true)
         
         // 選択されたアノテーションに合わせて、 FSPagerView の画像を変更する
         if let model = parkModelController,
