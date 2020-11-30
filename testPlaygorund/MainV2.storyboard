@@ -210,6 +210,9 @@
                                                         <state key="normal" title="お気に入りに入れる">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="likeButton:" destination="8rH-0g-wCa" eventType="touchUpInside" id="PkV-oA-71s"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ひとことラベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqu-Mm-sOO">
                                                         <rect key="frame" x="16" y="415.5" width="382" height="22.5"/>

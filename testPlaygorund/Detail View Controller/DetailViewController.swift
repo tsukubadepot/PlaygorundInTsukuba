@@ -137,6 +137,18 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: IBActions
+    @IBAction func likeButton(_ sender: UIButton) {
+        if let index = parkModelController.parkModel.liked.firstIndex(of: park.objectID) {
+            parkModelController.parkModel.liked.remove(at: index)
+            
+            likeButton.setTitle("お気に入りに入れる", for: .normal)
+        } else {
+            parkModelController.parkModel.liked.append(park.objectID)
+            
+            likeButton.setTitle("お気に入り🤍", for: .normal)
+        }
+    }
+    
     /// 戻るボタン
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -156,6 +168,13 @@ class DetailViewController: UIViewController {
         
         // トップ画像
         topImage.loadImage(forName: park.pictures.topImage)
+        
+        // お気に入り済みのチェック
+        if parkModelController.parkModel.liked.contains(park.objectID) {
+            likeButton.setTitle("お気に入り🤍", for: .normal)
+        } else {
+            likeButton.setTitle("お気に入りに入れる", for: .normal)
+        }
         
         // 公園の簡単な紹介
         commentLabel.text = park.comments.comment

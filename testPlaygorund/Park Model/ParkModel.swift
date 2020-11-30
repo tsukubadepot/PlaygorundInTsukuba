@@ -13,6 +13,17 @@ import MapKit
 class ParkModel {
     var parks:[ParkInfo] = []
     
+    /// お気に入り公園。objectID の配列
+    var liked: [String] {
+        get {
+            UserDefaults.standard.stringArray(forKey: "liked") ?? []
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "liked")
+        }
+    }
+    
     /// 取得するオブジェクトの上限数
     var fetchLimit: Int = 250
     
