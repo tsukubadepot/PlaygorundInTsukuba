@@ -55,7 +55,7 @@
                             <constraint firstItem="oCQ-xy-9iC" firstAttribute="top" secondItem="QlQ-UU-UXL" secondAttribute="top" constant="12" id="vx0-Kg-WBh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="リスト" image="1.circle.fill" catalog="system" id="kdQ-YE-K4B"/>
+                    <tabBarItem key="tabBarItem" title="リスト" image="list" id="kdQ-YE-K4B"/>
                     <connections>
                         <outlet property="parkListTableView" destination="voe-0M-Mnu" id="o6B-QE-tIC"/>
                     </connections>
@@ -123,7 +123,7 @@
                             <constraint firstItem="2qb-xW-5Mt" firstAttribute="trailing" secondItem="94Q-N3-bnK" secondAttribute="trailing" id="zQU-8s-MDN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="地図" id="rEK-7o-9Ob"/>
+                    <tabBarItem key="tabBarItem" title="地図" image="map" id="rEK-7o-9Ob"/>
                     <connections>
                         <outlet property="annotationMapView" destination="iDF-Bc-XWq" id="YXF-9p-uLt"/>
                         <outlet property="pagerView" destination="94Q-N3-bnK" id="4p0-1I-U4Y"/>
@@ -620,8 +620,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.circle.fill" catalog="system" width="128" height="121"/>
         <image name="current" width="50" height="50"/>
+        <image name="list" width="22.5" height="22.5"/>
+        <image name="map" width="22.5" height="22.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
