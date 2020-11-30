@@ -12,6 +12,8 @@ import MapKit
 
 class DetailViewController: UIViewController {
     // MARK: - local properties
+    /// Model View Controller
+    var modelController: MainTabBarController!
     /// 公園情報
     var park: ParkInfo!
     
@@ -28,8 +30,10 @@ class DetailViewController: UIViewController {
             topImage.isUserInteractionEnabled = true
         }
     }
+    
     /// 公園短文コメント
     @IBOutlet weak var commentLabel: UILabel!
+    
     /// お気に入りボタン
     @IBOutlet weak var likeButton: UIButton! {
         didSet {
@@ -87,6 +91,21 @@ class DetailViewController: UIViewController {
         didSet {
             mapView.layer.borderWidth = 1
             mapView.layer.borderColor = UIColor.gray.cgColor
+            // 全てのアノテーションを読み込み
+            mapView.isLoadAllAnnotations = true
+        }
+    }
+    
+    @IBOutlet weak var showAllAnnotationsSwitch: UISwitch! {
+        didSet {
+            showAllAnnotationsSwitch.isOn = false
+        }
+    }
+    
+    
+    @IBOutlet weak var sendCommentButton: UIButton! {
+        didSet {
+            sendCommentButton.layer.cornerRadius = sendCommentButton.frame.height / 2
         }
     }
     
@@ -100,12 +119,13 @@ class DetailViewController: UIViewController {
         setFacilities()
         
         // 公園詳細コメント
-        setComment()
+        setDescriptionComment()
         
         // 詳細画像
         setSubImages()
         
         // 近隣地図表示
+        mapView.dataSource = modelController
         showMap()
     }
     
@@ -115,12 +135,19 @@ class DetailViewController: UIViewController {
         let itemCount = park.playEquipments.count
         equipmentTableHeightConstraint.constant = CGFloat(itemCount) * cellHeight
     }
-        
+    
+    // MARK: IBActions
+    /// 戻るボタン
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
+    /// 周辺公園表示のスイッチが切り替わった場合
+    @IBAction func showAnnotationSelected(_ sender: UISwitch) {
+        showAnnotations()
+    }
     
+    // MARK: - private methods
     /// ヘッダ部の表示
     fileprivate func setHeader() {
         // ヘッダ部
@@ -152,9 +179,16 @@ class DetailViewController: UIViewController {
         venderImageView.image = park.facilities.vender == 1 ? UIImage(named: "vender") : UIImage(named: "no-vender")
     }
     
-    /// コメントの表示
-    fileprivate func setComment() {
-        descriptionLabel.text = park.comments.description.isEmpty ? "コメント未入力" : park.comments.description
+    /// 詳細コメントの表示
+    fileprivate func setDescriptionComment() {
+        var attributes: [NSAttributedString.Key: Any] = [:]
+        let paragraphStyle = NSMutableParagraphStyle()
+        let descriptionText = park.comments.description.isEmpty ? "コメント未入力" : park.comments.description
+
+        paragraphStyle.lineSpacing = 10.0
+        paragraphStyle.alignment = .natural
+        attributes.updateValue(paragraphStyle, forKey: .paragraphStyle)
+        descriptionLabel.attributedText = NSAttributedString(string: descriptionText, attributes: attributes)
     }
 
     /// 公園詳細画像の表示
@@ -162,9 +196,14 @@ class DetailViewController: UIViewController {
         subImageView1.loadImage(forName: park.pictures.subImage1)
         subImageView2.loadImage(forName: park.pictures.subImage2)
     }
-    
+        
     /// 近隣地図の表示
     private func showMap() {
+        setRegion()
+        showAnnotations()
+    }
+    
+    fileprivate func setRegion() {
         var mapRegion = MKCoordinateRegion()
         
         let mapRegionSpan = 0.01
@@ -173,14 +212,22 @@ class DetailViewController: UIViewController {
         mapRegion.span.longitudeDelta = mapRegionSpan
         
         mapView.setRegion(mapRegion, animated: true)
+    }
+
+    private func showAnnotations() {
+        // TODO: この地図で他のアノテーションをクリックした時の動作をどのようにするのか
         
-        // Create a map annotation
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = park.coordinate
-        annotation.title = park.name
-        annotation.subtitle = park.comments.comment
+        // すでに登録している Annotation があれば一度削除する
+        let visibleAnnotations = mapView.annotations
+        mapView.removeAnnotations(visibleAnnotations)
         
-        mapView.addAnnotation(annotation)
+        if showAllAnnotationsSwitch.isOn {
+            mapView.loadAllAnnotations()
+        } else {
+            // 一度中心を戻す
+            setRegion()
+            mapView.loadAnnotation(forName: park.name)
+        }
     }
 }
 

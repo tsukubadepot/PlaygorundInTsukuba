@@ -60,6 +60,7 @@ extension MainTabBarController: UITableViewDelegate {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
         vc.park = parkModel.parks[indexPath.row]
+        vc.modelController = self
         
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen
@@ -86,6 +87,12 @@ extension MainTabBarController: AnnotationMapViewDataSource {
         annotation.subtitle = park.comments.comment
         
         return annotation
+    }
+    
+    func firstIndex(ofName name: String) -> Int? {
+        return parkModel.parks.firstIndex { park -> Bool in
+            return park.name == name
+        }
     }
 }
 

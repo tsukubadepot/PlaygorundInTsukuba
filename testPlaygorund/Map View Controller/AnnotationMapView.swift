@@ -10,6 +10,7 @@ import MapKit
 protocol AnnotationMapViewDataSource: AnyObject {
     func numberOfAnnotations(in mapView: AnnotationMapView) -> Int
     func annotationMapView(_ mapView: AnnotationMapView, annotationFor: Int) -> MKPointAnnotation
+    func firstIndex(ofName name: String) -> Int?
 }
 
 protocol AnnotationMapViewDelegate: MKMapViewDelegate {
@@ -33,7 +34,6 @@ class AnnotationMapView: MKMapView {
         //loadAllAnnotations()
     }
     
-    
     /// 指定されたインデックスの Annotation を返す
     /// - Parameter index: 配列の index
     /// - Returns: index に対応した MKAnnotation. 存在しない場合には nil
@@ -50,7 +50,6 @@ class AnnotationMapView: MKMapView {
             return annotation.title == name
         }
     }
-    
     
     /// アノテーションの読み込み
     func loadAllAnnotations() {
@@ -80,4 +79,20 @@ class AnnotationMapView: MKMapView {
         }
         addAnnotations(annotationsInMap)
     }
+    
+    func loadAnnotation(forName name: String) {
+        // dataSource が設定されていない場合、早期リターン
+        guard let dataSource = dataSource else {
+            return
+        }
+        
+        guard let index = dataSource.firstIndex(ofName: name) else {
+            return
+        }
+        
+        let annotation = dataSource.annotationMapView(self, annotationFor: index)
+        
+        addAnnotation(annotation)
+    }
+    
 }

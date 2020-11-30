@@ -236,7 +236,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22.5" id="R8t-GV-bAS"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -357,7 +357,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22.5" id="yIm-fP-lAE"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -415,11 +415,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22.5" id="bbh-yn-RMo"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbb-kc-DaZ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCs-fx-09v">
                                                         <rect key="frame" x="24" y="34.5" width="366" height="102"/>
                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -428,13 +428,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
-                                                    <constraint firstItem="cbb-kc-DaZ" firstAttribute="top" secondItem="bbk-o8-iOw" secondAttribute="bottom" constant="6" id="ELW-DP-Urt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jCs-fx-09v" secondAttribute="bottom" constant="6" id="B4v-k0-LNI"/>
                                                     <constraint firstAttribute="trailing" secondItem="bbk-o8-iOw" secondAttribute="trailing" constant="16" id="G77-Ca-FLA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="cbb-kc-DaZ" secondAttribute="trailing" constant="24" id="H83-FD-ifF"/>
+                                                    <constraint firstItem="jCs-fx-09v" firstAttribute="leading" secondItem="Cj7-yK-lvq" secondAttribute="leading" constant="24" id="LEw-1T-bvA"/>
                                                     <constraint firstItem="bbk-o8-iOw" firstAttribute="top" secondItem="Cj7-yK-lvq" secondAttribute="top" constant="6" id="MmK-o9-54h"/>
                                                     <constraint firstItem="bbk-o8-iOw" firstAttribute="leading" secondItem="Cj7-yK-lvq" secondAttribute="leading" constant="16" id="WNE-TD-Eg1"/>
-                                                    <constraint firstItem="cbb-kc-DaZ" firstAttribute="leading" secondItem="Cj7-yK-lvq" secondAttribute="leading" constant="24" id="j4X-YA-eDY"/>
-                                                    <constraint firstAttribute="bottom" secondItem="cbb-kc-DaZ" secondAttribute="bottom" constant="6" id="tzW-YJ-SxN"/>
+                                                    <constraint firstItem="jCs-fx-09v" firstAttribute="top" secondItem="bbk-o8-iOw" secondAttribute="bottom" constant="6" id="dIr-mb-uzg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jCs-fx-09v" secondAttribute="trailing" constant="24" id="riJ-SS-sK9"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqo-0z-KiD" userLabel="園内写真">
@@ -445,7 +445,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="22.5" id="9Gc-g8-yP5"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -485,7 +485,7 @@
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22.5" id="sPM-dy-iih"/>
                                                             <constraint firstAttribute="height" constant="22.5" id="zip-J0-r5u"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -497,6 +497,9 @@
                                                     </mapView>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-MD-4Ft">
                                                         <rect key="frame" x="341" y="406.5" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="showAnnotationSelected:" destination="8rH-0g-wCa" eventType="valueChanged" id="ldB-lx-S23"/>
+                                                        </connections>
                                                     </switch>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近隣の公園も表示する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-E4-uFq">
                                                         <rect key="frame" x="24" y="410.5" width="140" height="22.5"/>
@@ -579,7 +582,7 @@
                     </view>
                     <connections>
                         <outlet property="commentLabel" destination="Rqu-Mm-sOO" id="RdM-cH-6BI"/>
-                        <outlet property="descriptionLabel" destination="cbb-kc-DaZ" id="yin-YB-EPe"/>
+                        <outlet property="descriptionLabel" destination="jCs-fx-09v" id="oGR-AA-uuN"/>
                         <outlet property="equipmentTable" destination="CMB-dr-UlZ" id="0ld-ai-LQP"/>
                         <outlet property="equipmentTableHeightConstraint" destination="6cn-bS-BIn" id="EMx-46-gfe"/>
                         <outlet property="likeButton" destination="A9P-9y-17F" id="QGV-DE-vwv"/>
@@ -588,6 +591,8 @@
                         <outlet property="parkAddressLabel" destination="0fr-zN-taP" id="GxQ-fG-eNd"/>
                         <outlet property="parkNameLabel" destination="sGc-fS-5Uz" id="DwZ-oz-mdT"/>
                         <outlet property="parkingImageView" destination="sRw-Gu-OXX" id="7Hr-Wa-vtI"/>
+                        <outlet property="sendCommentButton" destination="19I-kE-2DY" id="9k3-u3-gFl"/>
+                        <outlet property="showAllAnnotationsSwitch" destination="2tw-MD-4Ft" id="TqW-hZ-wLs"/>
                         <outlet property="storeImageView" destination="dZu-Zl-o8R" id="mlW-uf-sAY"/>
                         <outlet property="subImageView1" destination="uzb-i7-Q0Z" id="dbC-yU-aRL"/>
                         <outlet property="subImageView2" destination="gXz-2H-cJ9" id="DbR-Nb-qPh"/>

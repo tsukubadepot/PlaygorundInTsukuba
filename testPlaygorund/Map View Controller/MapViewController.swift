@@ -131,7 +131,8 @@ extension MapViewController: AnnotationMapViewDelegate {
         mapView.setCenter(selectedCoordination, animated: true)
         
         // 選択されたアノテーションに合わせて、 FSPagerView の画像を変更する
-        if let model = parkModelController, let index = model.parkModel.index(of: annotation.title!!) {
+        if let model = parkModelController,
+           let index = model.parkModel.index(of: annotation.title!!) {
             self.pagerView.scrollToItem(at: index, animated: true)
         }
     }
@@ -174,6 +175,7 @@ extension MapViewController: FSPagerViewDelegate {
             let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             
             vc.park = parkModelController!.parkModel.parks[index]
+            vc.modelController = parkModelController
             
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen
