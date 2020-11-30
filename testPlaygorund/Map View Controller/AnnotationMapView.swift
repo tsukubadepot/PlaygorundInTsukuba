@@ -25,12 +25,12 @@ class AnnotationMapView: MKMapView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        reloadAnnotations()
+        //loadAllAnnotations()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        reloadAnnotations()
+        //loadAllAnnotations()
     }
     
     
@@ -53,7 +53,7 @@ class AnnotationMapView: MKMapView {
     
     
     /// アノテーションの読み込み
-    func reloadAnnotations() {
+    func loadAllAnnotations() {
         // 追加する注釈
         var annotationsInMap: [MKPointAnnotation] = []
         
@@ -71,6 +71,7 @@ class AnnotationMapView: MKMapView {
             let mapPoint = MKMapPoint(annotation.coordinate)
             
             if isLoadAllAnnotations {
+                // アノテーションを全てロードする場合
                 annotationsInMap.append(annotation)
             } else if self.visibleMapRect.contains(mapPoint) {
                 // 表示領域内のみ Annotation に追加する

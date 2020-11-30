@@ -108,7 +108,7 @@ class MapViewController: UIViewController {
         let visibleAnnotations = annotationMapView.annotations
         annotationMapView.removeAnnotations(visibleAnnotations)
         
-        annotationMapView.reloadAnnotations()
+        annotationMapView.loadAllAnnotations()
     }
 }
 
