@@ -101,6 +101,14 @@ class MapViewController: UIViewController {
         compassButton.rightAnchor.constraint(equalTo: annotationMapView.rightAnchor, constant: -12).isActive = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // TODO: KingFisher の DownsamplingImageProcessor が初期読み込みでこけてしまうことへの対策。
+        // フレーム値が確定していないため、ダウンサンプリングに失敗することがある。
+        pagerView.reloadData()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
