@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import MapKit
 
 class DetailViewController: UIViewController {
     // MARK: - local properties
@@ -61,6 +62,34 @@ class DetailViewController: UIViewController {
     /// Cell の高さ
     let cellHeight: CGFloat = 30
     
+    // MARK: 公園コメント
+    @IBOutlet weak var descriptionLabel: UILabel!
+
+    // MARK: 園内写真
+    @IBOutlet weak var subImageView1: UIImageView! {
+        didSet {
+            // 短辺基準に全体表示
+            subImageView1.contentMode = .scaleAspectFill
+            subImageView1.isUserInteractionEnabled = true
+        }
+    }
+    
+    @IBOutlet weak var subImageView2: UIImageView! {
+        didSet {
+            // 短辺基準に全体表示
+            subImageView2.contentMode = .scaleAspectFill
+            subImageView2.isUserInteractionEnabled = true
+        }
+    }
+    
+    // MARK: 周辺地図
+    @IBOutlet weak var mapView: AnnotationMapView! {
+        didSet {
+            mapView.layer.borderWidth = 1
+            mapView.layer.borderColor = UIColor.gray.cgColor
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,15 +99,14 @@ class DetailViewController: UIViewController {
         // 設備情報
         setFacilities()
         
-        //        // MARK: 公園詳細コメント
-        //        descriptionTextField.text = parkInfo.comments.description.isEmpty ? "コメント未入力" : parkInfo.comments.description
-        //
-        //        // MARK: 詳細画像
-        //        loadImage(forView: subImageView1, forName: parkInfo.pictures.subImage1)
-        //        loadImage(forView: subImageView2, forName: parkInfo.pictures.subImage2)
-        //
-        //        // MARK: 近隣地図表示
-        //        showMap()
+        // 公園詳細コメント
+        setComment()
+        
+        // 詳細画像
+        setSubImages()
+        
+        // 近隣地図表示
+        showMap()
     }
     
     override func viewWillLayoutSubviews() {
@@ -122,6 +150,37 @@ class DetailViewController: UIViewController {
         
         // 自動販売機
         venderImageView.image = park.facilities.vender == 1 ? UIImage(named: "vender") : UIImage(named: "no-vender")
+    }
+    
+    /// コメントの表示
+    fileprivate func setComment() {
+        descriptionLabel.text = park.comments.description.isEmpty ? "コメント未入力" : park.comments.description
+    }
+
+    /// 公園詳細画像の表示
+    fileprivate func setSubImages() {
+        subImageView1.loadImage(forName: park.pictures.subImage1)
+        subImageView2.loadImage(forName: park.pictures.subImage2)
+    }
+    
+    /// 近隣地図の表示
+    private func showMap() {
+        var mapRegion = MKCoordinateRegion()
+        
+        let mapRegionSpan = 0.01
+        mapRegion.center = park.coordinate
+        mapRegion.span.latitudeDelta = mapRegionSpan
+        mapRegion.span.longitudeDelta = mapRegionSpan
+        
+        mapView.setRegion(mapRegion, animated: true)
+        
+        // Create a map annotation
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = park.coordinate
+        annotation.title = park.name
+        annotation.subtitle = park.comments.comment
+        
+        mapView.addAnnotation(annotation)
     }
 }
 

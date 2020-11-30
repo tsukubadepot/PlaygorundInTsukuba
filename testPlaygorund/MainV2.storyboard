@@ -161,34 +161,37 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-V3-Y1l">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1035.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1870.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tne-dP-HEb" userLabel="ヘッダ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="長い公園名を試しに入れてみて様子を見てみる。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGc-fS-5Uz">
-                                                        <rect key="frame" x="16" y="6" width="382" height="166.5"/>
+                                                        <rect key="frame" x="16" y="6" width="382" height="139"/>
                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fr-zN-taP">
-                                                        <rect key="frame" x="16" y="175.5" width="382" height="17"/>
+                                                        <rect key="frame" x="16" y="148" width="382" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.5" id="ulc-kv-X5u"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-ej-2uS">
-                                                        <rect key="frame" x="0.0" y="198.5" width="414" height="233"/>
+                                                        <rect key="frame" x="0.0" y="176.5" width="414" height="233"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="jNa-ej-2uS" secondAttribute="height" multiplier="16:9" id="hHv-SH-U6O"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9P-9y-17F">
-                                                        <rect key="frame" x="24" y="464" width="366" height="30"/>
+                                                        <rect key="frame" x="24" y="444" width="366" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="EVo-mo-1Mk"/>
+                                                            <constraint firstAttribute="height" constant="50" id="EVo-mo-1Mk"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                         <state key="normal" title="お気に入りに入れる">
@@ -196,7 +199,10 @@
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ひとことラベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqu-Mm-sOO">
-                                                        <rect key="frame" x="16" y="437.5" width="382" height="20.5"/>
+                                                        <rect key="frame" x="16" y="415.5" width="382" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.5" id="91d-hL-AiO"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -226,25 +232,28 @@
                                                 <rect key="frame" x="0.0" y="500" width="414" height="135.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設備情報" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dn-eL-VDD">
-                                                        <rect key="frame" x="16" y="6" width="382" height="17"/>
+                                                        <rect key="frame" x="16" y="6" width="382" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.5" id="R8t-GV-bAS"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h1S-Ws-Cw9">
-                                                        <rect key="frame" x="24" y="29" width="366" height="100.5"/>
+                                                        <rect key="frame" x="24" y="34.5" width="366" height="95"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bJo-sy-87I">
-                                                                <rect key="frame" x="0.0" y="12" width="66" height="76.5"/>
+                                                                <rect key="frame" x="0.0" y="9" width="66" height="77"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sRw-Gu-OXX">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="sRw-Gu-OXX" secondAttribute="height" id="83O-ug-qqn"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="駐車場" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-xp-qwO">
-                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -252,16 +261,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="F4g-d7-UEn">
-                                                                <rect key="frame" x="75" y="12" width="66" height="76.5"/>
+                                                                <rect key="frame" x="75" y="9" width="66" height="77"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-ua-0XX">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="flJ-ua-0XX" secondAttribute="height" id="dU5-KZ-eaB"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トイレ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-pS-WDG">
-                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -269,16 +278,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nla-M5-MVi">
-                                                                <rect key="frame" x="150" y="12" width="66" height="76.5"/>
+                                                                <rect key="frame" x="150" y="9" width="66" height="77"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EnK-VR-5Zz">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="EnK-VR-5Zz" secondAttribute="height" id="HTg-i3-M2W"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多目的トイレ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGq-Qg-apl">
-                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -286,16 +295,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZUy-gw-y1y">
-                                                                <rect key="frame" x="225" y="12" width="66" height="76.5"/>
+                                                                <rect key="frame" x="225" y="9" width="66" height="77"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-Zl-o8R">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="dZu-Zl-o8R" secondAttribute="height" id="oda-KI-vCN"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近隣コンビニ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-7c-w2R">
-                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -303,16 +312,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-SQ-cAh">
-                                                                <rect key="frame" x="300" y="12" width="66" height="76.5"/>
+                                                                <rect key="frame" x="300" y="9" width="66" height="77"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-sn-knq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="DJ8-sn-knq" secondAttribute="height" id="uw0-3Y-EJL"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動販売機" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-67-hKx">
-                                                                        <rect key="frame" x="0.0" y="68.5" width="66" height="8"/>
+                                                                        <rect key="frame" x="0.0" y="69" width="66" height="8"/>
                                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -341,16 +350,19 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M14-kO-QYf" userLabel="遊具情報">
-                                                <rect key="frame" x="0.0" y="635.5" width="414" height="400"/>
+                                                <rect key="frame" x="0.0" y="635.5" width="414" height="128.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遊具情報" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbf-lQ-IUS">
-                                                        <rect key="frame" x="16" y="6" width="382" height="294"/>
+                                                        <rect key="frame" x="16" y="6" width="382" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.5" id="yIm-fP-lAE"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-dr-UlZ">
-                                                        <rect key="frame" x="24" y="306" width="366" height="88"/>
+                                                        <rect key="frame" x="24" y="34.5" width="366" height="88"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="88" id="6cn-bS-BIn"/>
@@ -395,6 +407,146 @@
                                                     <constraint firstAttribute="bottom" secondItem="CMB-dr-UlZ" secondAttribute="bottom" constant="6" id="fBa-Gz-c7X"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj7-yK-lvq" userLabel="コメント">
+                                                <rect key="frame" x="0.0" y="764" width="414" height="142.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメント" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-o8-iOw">
+                                                        <rect key="frame" x="16" y="6" width="382" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.5" id="bbh-yn-RMo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbb-kc-DaZ">
+                                                        <rect key="frame" x="24" y="34.5" width="366" height="102"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="cbb-kc-DaZ" firstAttribute="top" secondItem="bbk-o8-iOw" secondAttribute="bottom" constant="6" id="ELW-DP-Urt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bbk-o8-iOw" secondAttribute="trailing" constant="16" id="G77-Ca-FLA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cbb-kc-DaZ" secondAttribute="trailing" constant="24" id="H83-FD-ifF"/>
+                                                    <constraint firstItem="bbk-o8-iOw" firstAttribute="top" secondItem="Cj7-yK-lvq" secondAttribute="top" constant="6" id="MmK-o9-54h"/>
+                                                    <constraint firstItem="bbk-o8-iOw" firstAttribute="leading" secondItem="Cj7-yK-lvq" secondAttribute="leading" constant="16" id="WNE-TD-Eg1"/>
+                                                    <constraint firstItem="cbb-kc-DaZ" firstAttribute="leading" secondItem="Cj7-yK-lvq" secondAttribute="leading" constant="24" id="j4X-YA-eDY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cbb-kc-DaZ" secondAttribute="bottom" constant="6" id="tzW-YJ-SxN"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqo-0z-KiD" userLabel="園内写真">
+                                                <rect key="frame" x="0.0" y="906.5" width="414" height="458.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="園内写真" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4X-l6-LCf">
+                                                        <rect key="frame" x="16" y="6" width="382" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.5" id="9Gc-g8-yP5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uzb-i7-Q0Z">
+                                                        <rect key="frame" x="24" y="34.5" width="366" height="206"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="uzb-i7-Q0Z" secondAttribute="height" multiplier="16:9" id="cxP-Jc-ark"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXz-2H-cJ9">
+                                                        <rect key="frame" x="24" y="246.5" width="366" height="206"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="gXz-2H-cJ9" secondAttribute="height" multiplier="16:9" id="X6C-mK-uKB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="j4X-l6-LCf" firstAttribute="top" secondItem="bqo-0z-KiD" secondAttribute="top" constant="6" id="2qX-AO-sGf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gXz-2H-cJ9" secondAttribute="trailing" constant="24" id="3u6-SL-kBM"/>
+                                                    <constraint firstItem="gXz-2H-cJ9" firstAttribute="leading" secondItem="bqo-0z-KiD" secondAttribute="leading" constant="24" id="Ibe-K0-vpM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gXz-2H-cJ9" secondAttribute="bottom" constant="6" id="JXC-qi-APp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uzb-i7-Q0Z" secondAttribute="trailing" constant="24" id="NOl-IQ-lm7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j4X-l6-LCf" secondAttribute="trailing" constant="16" id="QOi-aU-gox"/>
+                                                    <constraint firstItem="uzb-i7-Q0Z" firstAttribute="leading" secondItem="bqo-0z-KiD" secondAttribute="leading" constant="24" id="hqf-Q8-hxS"/>
+                                                    <constraint firstItem="j4X-l6-LCf" firstAttribute="leading" secondItem="bqo-0z-KiD" secondAttribute="leading" constant="16" id="qop-v4-Ndz"/>
+                                                    <constraint firstItem="gXz-2H-cJ9" firstAttribute="top" secondItem="uzb-i7-Q0Z" secondAttribute="bottom" constant="6" id="w3c-cd-RNt"/>
+                                                    <constraint firstItem="uzb-i7-Q0Z" firstAttribute="top" secondItem="j4X-l6-LCf" secondAttribute="bottom" constant="6" id="x8G-i5-eG4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnO-fI-NcD" userLabel="周辺地図">
+                                                <rect key="frame" x="0.0" y="1365" width="414" height="443.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="周辺地図" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U63-C8-Ufn">
+                                                        <rect key="frame" x="16" y="6" width="382" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22.5" id="sPM-dy-iih"/>
+                                                            <constraint firstAttribute="height" constant="22.5" id="zip-J0-r5u"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4vb-Yd-Vrw" customClass="AnnotationMapView" customModule="Park_in_Tsukuba" customModuleProvider="target">
+                                                        <rect key="frame" x="24" y="34.5" width="366" height="366"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="4vb-Yd-Vrw" secondAttribute="height" id="mwZ-XH-rKV"/>
+                                                        </constraints>
+                                                    </mapView>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-MD-4Ft">
+                                                        <rect key="frame" x="341" y="406.5" width="51" height="31"/>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近隣の公園も表示する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-E4-uFq">
+                                                        <rect key="frame" x="24" y="410.5" width="140" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22.5" id="Jvk-IL-JvA"/>
+                                                            <constraint firstAttribute="height" constant="22.5" id="kBe-GH-L0d"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="4vb-Yd-Vrw" firstAttribute="leading" secondItem="YnO-fI-NcD" secondAttribute="leading" constant="24" id="4mU-C3-hCa"/>
+                                                    <constraint firstItem="2tw-MD-4Ft" firstAttribute="top" secondItem="4vb-Yd-Vrw" secondAttribute="bottom" constant="6" id="DtI-nS-W99"/>
+                                                    <constraint firstItem="U63-C8-Ufn" firstAttribute="top" secondItem="YnO-fI-NcD" secondAttribute="top" constant="6" id="F85-Vd-5tg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4vb-Yd-Vrw" secondAttribute="trailing" constant="24" id="Mhh-qr-TXp"/>
+                                                    <constraint firstItem="2tw-MD-4Ft" firstAttribute="centerY" secondItem="jfs-E4-uFq" secondAttribute="centerY" id="OUg-My-gVm"/>
+                                                    <constraint firstItem="2tw-MD-4Ft" firstAttribute="trailing" secondItem="4vb-Yd-Vrw" secondAttribute="trailing" id="T1n-Qk-h80"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2tw-MD-4Ft" secondAttribute="bottom" constant="6" id="T5j-ab-cDf"/>
+                                                    <constraint firstItem="jfs-E4-uFq" firstAttribute="leading" secondItem="4vb-Yd-Vrw" secondAttribute="leading" id="i2m-JX-GZx"/>
+                                                    <constraint firstItem="U63-C8-Ufn" firstAttribute="leading" secondItem="YnO-fI-NcD" secondAttribute="leading" constant="16" id="oH8-Eg-Tfi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="U63-C8-Ufn" secondAttribute="trailing" constant="16" id="uWU-G2-173"/>
+                                                    <constraint firstItem="4vb-Yd-Vrw" firstAttribute="top" secondItem="U63-C8-Ufn" secondAttribute="bottom" constant="6" id="vu2-hb-0Ax"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdQ-v6-Ze4" userLabel="問題報告ボタン">
+                                                <rect key="frame" x="0.0" y="1808.5" width="414" height="62"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19I-kE-2DY">
+                                                        <rect key="frame" x="16" y="6" width="382" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Gjl-7H-Teu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <state key="normal" title="問題報告はこちらから">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="19I-kE-2DY" firstAttribute="leading" secondItem="sdQ-v6-Ze4" secondAttribute="leading" constant="16" id="4bb-wt-9cM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="19I-kE-2DY" secondAttribute="trailing" constant="16" id="Jrk-pg-1pN"/>
+                                                    <constraint firstItem="19I-kE-2DY" firstAttribute="top" secondItem="sdQ-v6-Ze4" secondAttribute="top" constant="6" id="UuV-EB-m1t"/>
+                                                    <constraint firstAttribute="bottom" secondItem="19I-kE-2DY" secondAttribute="bottom" constant="6" id="Yv5-Vq-sGF"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="OAo-dI-EPY" firstAttribute="top" secondItem="tne-dP-HEb" secondAttribute="bottom" id="3pC-4M-EPO"/>
@@ -427,14 +579,18 @@
                     </view>
                     <connections>
                         <outlet property="commentLabel" destination="Rqu-Mm-sOO" id="RdM-cH-6BI"/>
+                        <outlet property="descriptionLabel" destination="cbb-kc-DaZ" id="yin-YB-EPe"/>
                         <outlet property="equipmentTable" destination="CMB-dr-UlZ" id="0ld-ai-LQP"/>
                         <outlet property="equipmentTableHeightConstraint" destination="6cn-bS-BIn" id="EMx-46-gfe"/>
                         <outlet property="likeButton" destination="A9P-9y-17F" id="QGV-DE-vwv"/>
+                        <outlet property="mapView" destination="4vb-Yd-Vrw" id="DZo-fi-Z5P"/>
                         <outlet property="multiPurposeImageView" destination="EnK-VR-5Zz" id="LnL-v9-8N6"/>
                         <outlet property="parkAddressLabel" destination="0fr-zN-taP" id="GxQ-fG-eNd"/>
                         <outlet property="parkNameLabel" destination="sGc-fS-5Uz" id="DwZ-oz-mdT"/>
                         <outlet property="parkingImageView" destination="sRw-Gu-OXX" id="7Hr-Wa-vtI"/>
                         <outlet property="storeImageView" destination="dZu-Zl-o8R" id="mlW-uf-sAY"/>
+                        <outlet property="subImageView1" destination="uzb-i7-Q0Z" id="dbC-yU-aRL"/>
+                        <outlet property="subImageView2" destination="gXz-2H-cJ9" id="DbR-Nb-qPh"/>
                         <outlet property="toiletImageView" destination="flJ-ua-0XX" id="pSC-VZ-bCs"/>
                         <outlet property="topImage" destination="jNa-ej-2uS" id="1oZ-hr-NkD"/>
                         <outlet property="venderImageView" destination="DJ8-sn-knq" id="AL9-jF-bam"/>
@@ -452,6 +608,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
