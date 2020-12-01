@@ -38,6 +38,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var likeButton: UIButton! {
         didSet {
             likeButton.layer.cornerRadius = likeButton.frame.height / 2
+            //likeButton.backgroundColor =
         }
     }
     
@@ -146,7 +147,7 @@ class DetailViewController: UIViewController {
         } else {
             parkModelController.parkModel.liked.append(park.objectID)
             
-            likeButton.setTitle("お気に入り🤍", for: .normal)
+            likeButton.setTitle("お気に入り済み🤍", for: .normal)
         }
     }
     
