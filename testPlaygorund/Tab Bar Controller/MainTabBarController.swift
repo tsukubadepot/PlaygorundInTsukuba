@@ -28,12 +28,37 @@ class MainTabBarController: UITabBarController {
 
 extension MainTabBarController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parkModel.parks.count
+        switch self.selectedIndex {
+        case 0:
+            return parkModel.parks.count
+            
+        case 2:
+            return parkModel.parks.filter { park -> Bool in
+                parkModel.liked.contains(park.objectID)
+            }.count
+        default:
+            fatalError("TabBarController のインデックスが不明")
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ParkTableViewCell
-        let park = parkModel.parks[indexPath.row]
+        //let park = parkModel.parks[indexPath.row]
+        
+        var park: ParkInfo!
+        
+        switch self.selectedIndex {
+        case 0:
+            park = parkModel.parks[indexPath.row]
+            
+        case 2:
+            park = parkModel.parks.filter { park -> Bool in
+                parkModel.liked.contains(park.objectID)
+            }[indexPath.row]
+            
+        default:
+            fatalError("TabBarController のインデックスが不明")
+        }
         
         cell.imageThumbnailView.loadImage(forName: park.pictures.topImage)
         
@@ -62,8 +87,22 @@ extension MainTabBarController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+  
+        switch self.selectedIndex {
+        case 0:
+            vc.park = parkModel.parks[indexPath.row]
+            
+        case 2:
+            vc.park = parkModel.parks.filter { park -> Bool in
+                parkModel.liked.contains(park.objectID)
+            }[indexPath.row]
+            
+        default:
+            fatalError("TabBarController のインデックスが不明")
+        }
+
         
-        vc.park = parkModel.parks[indexPath.row]
+        //vc.park = parkModel.parks[indexPath.row]
         vc.parkModelController = self
         
         vc.modalTransitionStyle = .crossDissolve

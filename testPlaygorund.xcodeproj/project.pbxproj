@@ -32,6 +32,7 @@
 		BFF8A63525712CA0009EED2A /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */; };
 		BFF8A6382572FCDF009EED2A /* PlayEquipmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A6372572FCDE009EED2A /* PlayEquipmentTableViewCell.swift */; };
 		BFF8A669257507B7009EED2A /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A668257507B7009EED2A /* LocationModel.swift */; };
+		BFF8A66E2575CF6D009EED2A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A66D2575CF6D009EED2A /* FavoriteViewController.swift */; };
 		F2C73E3601F99F5D3EC16EA8 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0D690843FD74E521E7884 /* Pods_testPlaygorund.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
 		BFF8A6372572FCDE009EED2A /* PlayEquipmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayEquipmentTableViewCell.swift; sourceTree = "<group>"; };
 		BFF8A668257507B7009EED2A /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		BFF8A66D2575CF6D009EED2A /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				BF0EA7BC256E1A7D00609287 /* Tab Bar Controller */,
 				BF0EA7EB256E219A00609287 /* List View Controller */,
 				BFF8A5DC2570A3E9009EED2A /* Map View Controller */,
+				BFF8A66C2575CF58009EED2A /* Favorite View Controller */,
 				BFF8A62A25710586009EED2A /* Detail View Controller */,
 				BFF8A66725750787009EED2A /* Location Model */,
 				BF0EA7BD256E1A9600609287 /* Park Model */,
@@ -219,6 +222,14 @@
 				BFF8A668257507B7009EED2A /* LocationModel.swift */,
 			);
 			path = "Location Model";
+			sourceTree = "<group>";
+		};
+		BFF8A66C2575CF58009EED2A /* Favorite View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8A66D2575CF6D009EED2A /* FavoriteViewController.swift */,
+			);
+			path = "Favorite View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				BFF8A6382572FCDF009EED2A /* PlayEquipmentTableViewCell.swift in Sources */,
 				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
+				BFF8A66E2575CF6D009EED2A /* FavoriteViewController.swift in Sources */,
 				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,
 				BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */,
 				BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */,

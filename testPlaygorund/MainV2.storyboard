@@ -131,7 +131,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gih-Ie-enE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478" y="877"/>
+            <point key="canvasLocation" x="-1075" y="877"/>
+        </scene>
+        <!--お気に入り-->
+        <scene sceneID="sJM-s0-Ed8">
+            <objects>
+                <viewController id="QtP-f8-Azs" customClass="FavoriteViewController" customModule="Park_in_Tsukuba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SNm-Xr-m9C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-bu-Cvh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お気に入り" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrI-dI-2yi">
+                                <rect key="frame" x="12" y="54" width="105" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="euO-q0-yKX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xMA-vZ-KJu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xMA-vZ-KJu" firstAttribute="trailing" secondItem="euO-q0-yKX" secondAttribute="trailing" id="MP1-zx-v78"/>
+                            <constraint firstItem="WrI-dI-2yi" firstAttribute="top" secondItem="xMA-vZ-KJu" secondAttribute="top" constant="10" id="Pbj-1K-gCG"/>
+                            <constraint firstItem="xMA-vZ-KJu" firstAttribute="bottom" secondItem="euO-q0-yKX" secondAttribute="bottom" id="RKm-ID-iB7"/>
+                            <constraint firstItem="XWn-bu-Cvh" firstAttribute="leading" secondItem="SNm-Xr-m9C" secondAttribute="leading" id="aAc-au-syB"/>
+                            <constraint firstItem="XWn-bu-Cvh" firstAttribute="top" secondItem="xMA-vZ-KJu" secondAttribute="top" id="fqp-O7-Vsf"/>
+                            <constraint firstItem="WrI-dI-2yi" firstAttribute="leading" secondItem="xMA-vZ-KJu" secondAttribute="leading" constant="12" id="jzy-0S-giO"/>
+                            <constraint firstItem="xMA-vZ-KJu" firstAttribute="trailing" secondItem="XWn-bu-Cvh" secondAttribute="trailing" id="ks6-Ti-McC"/>
+                            <constraint firstItem="euO-q0-yKX" firstAttribute="top" secondItem="XWn-bu-Cvh" secondAttribute="bottom" id="lLZ-6g-NDt"/>
+                            <constraint firstItem="euO-q0-yKX" firstAttribute="leading" secondItem="xMA-vZ-KJu" secondAttribute="leading" id="x6q-7p-doM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="お気に入り" image="favorite" id="u4G-oN-dxf"/>
+                    <connections>
+                        <outlet property="favoriteTableView" destination="euO-q0-yKX" id="86i-MT-1Ro"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6E-TN-WHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="888"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="ioq-6c-E94">
@@ -146,6 +192,7 @@
                     <connections>
                         <segue destination="0RJ-FA-XDy" kind="relationship" relationship="viewControllers" id="Oln-GU-K2r"/>
                         <segue destination="d4k-bE-8tl" kind="relationship" relationship="viewControllers" id="gFj-Im-3n5"/>
+                        <segue destination="QtP-f8-Azs" kind="relationship" relationship="viewControllers" id="hed-rE-CCa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgX-to-CVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -624,6 +671,7 @@
     </scenes>
     <resources>
         <image name="current" width="50" height="50"/>
+        <image name="favorite" width="22.5" height="22.5"/>
         <image name="list" width="22.5" height="22.5"/>
         <image name="map" width="22.5" height="22.5"/>
         <systemColor name="systemBackgroundColor">

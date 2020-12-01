@@ -151,6 +151,12 @@ class DetailViewController: UIViewController {
     
     /// 戻るボタン
     @IBAction func backButton(_ sender: UIBarButtonItem) {
+        // 呼び出し側が　FavoriteViewController だった場合は
+        // tableView をリロードする
+        if let callerViewController = parkModelController.viewControllers?[parkModelController.selectedIndex] as? FavoriteViewController {
+            callerViewController.favoriteTableView.reloadData()
+        }
+
         dismiss(animated: true, completion: nil)
     }
     
