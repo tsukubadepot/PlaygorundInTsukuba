@@ -33,9 +33,8 @@ extension MainTabBarController: UITableViewDataSource {
             return parkModel.parks.count
             
         case 2:
-            return parkModel.parks.filter { park -> Bool in
-                parkModel.liked.contains(park.objectID)
-            }.count
+            return parkModel.likedParks.count
+            
         default:
             fatalError("TabBarController のインデックスが不明")
         }
@@ -43,7 +42,6 @@ extension MainTabBarController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ParkTableViewCell
-        //let park = parkModel.parks[indexPath.row]
         
         var park: ParkInfo!
         
@@ -52,10 +50,7 @@ extension MainTabBarController: UITableViewDataSource {
             park = parkModel.parks[indexPath.row]
             
         case 2:
-            park = parkModel.parks.filter { park -> Bool in
-                parkModel.liked.contains(park.objectID)
-            }[indexPath.row]
-            
+            park = parkModel.likedParks[indexPath.row]
         default:
             fatalError("TabBarController のインデックスが不明")
         }

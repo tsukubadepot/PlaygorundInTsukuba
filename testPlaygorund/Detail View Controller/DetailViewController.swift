@@ -138,6 +138,7 @@ class DetailViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func likeButton(_ sender: UIButton) {
+        // TODO: parkModel の内部を見ずに処理できるように書き換えたい
         if let index = parkModelController.parkModel.liked.firstIndex(of: park.objectID) {
             parkModelController.parkModel.liked.remove(at: index)
             

@@ -11,7 +11,11 @@ import NCMB
 import MapKit
 
 class ParkModel {
+    /// 公園に関する生データ
     var parks:[ParkInfo] = []
+    
+    /// お気に入りに入った公園
+    var likedParks: [ParkInfo] = []
     
     /// お気に入り公園。objectID の配列
     var liked: [String] {
@@ -21,6 +25,14 @@ class ParkModel {
         
         set {
             UserDefaults.standard.set(newValue, forKey: "liked")
+            updateLikedParks()
+        }
+    }
+    
+    /// お気に入り情報の更新
+    private func updateLikedParks() {
+        likedParks = parks.filter { park -> Bool in
+            liked.contains(park.objectID)
         }
     }
     
@@ -87,6 +99,9 @@ class ParkModel {
 //        }
         
         print("公園数:", parks.count)
+        
+        // お気に入りを更新する
+        updateLikedParks()
     }
     
     /// 公園情報の取得
@@ -128,7 +143,6 @@ class ParkModel {
             }
         }
     }
-    
     
     /// 指定された公園のインデックスを返す
     /// - Parameter parkName: 公園名
