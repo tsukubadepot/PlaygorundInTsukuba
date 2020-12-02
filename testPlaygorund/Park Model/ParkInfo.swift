@@ -34,17 +34,27 @@ class Comments {
 }
 
 /// 付帯設備
-class Facilities {
-    ///  駐車場有無（parking）
-    var parking = -1
-    ///  コンビニ有無（convenience）
-    var convenience = -1
-    ///  自動販売機有無（vender）
-    var vender = -1
-    ///  トイレ有無（toilet）
-    var toilet = -1
-    ///  多目的トイレ有無（multipurpose）
-    var multipurpose = -1
+enum Facilites: CustomStringConvertible {
+    case parking
+    case toilet
+    case multipurpose
+    case convenience
+    case vender
+
+    var description: String {
+        switch self {
+        case .toilet:
+            return "トイレ"
+        case .parking:
+            return "駐車場（有料含む）"
+        case .multipurpose:
+            return "多目的トイレ"
+        case .convenience:
+            return "近隣コンビニ"
+        case .vender:
+            return "自動販売機（近隣含む）"
+        }
+    }
 }
 
 /// 公園の情報
@@ -71,7 +81,7 @@ class ParkInfo {
     var comments = Comments()
     
     /// 設備情報
-    var facilities = Facilities()
+    var facilities: [Facilites] = []
     
     /// 遊具一覧（facilities）：[String]
     var playEquipments: [String] = []
@@ -95,11 +105,11 @@ class ParkInfo {
         obj["comment"] = comments.comment
         obj["description"] = comments.description
         
-        obj["parking"] = facilities.parking
-        obj["convenience"] = facilities.convenience
-        obj["vender"] = facilities.vender
-        obj["toilet"] = facilities.toilet
-        obj["multipurpose"] = facilities.multipurpose
+        obj["parking"] = facilities.contains(.parking) ? 1 : 0
+        obj["convenience"] = facilities.contains(.convenience) ? 1 : 0
+        obj["vender"] = facilities.contains(.vender) ? 1 : 0
+        obj["toilet"] = facilities.contains(.toilet) ? 1 : 0
+        obj["multipurpose"] = facilities.contains(.multipurpose) ? 1 : 0
         
         obj["facilities"] = playEquipments
         

@@ -82,11 +82,25 @@ class ParkModel {
             parkInfo.comments.comment = comment
             parkInfo.comments.description = descriptionCommnet
             
-            parkInfo.facilities.parking = parking
-            parkInfo.facilities.convenience = convenience
-            parkInfo.facilities.vender = vender
-            parkInfo.facilities.toilet = toilet
-            parkInfo.facilities.multipurpose = multipurpose
+            if parking == 1 {
+                parkInfo.facilities.append(.parking)
+            }
+            
+            if convenience == 1 {
+                parkInfo.facilities.append(.convenience)
+            }
+            
+            if vender == 1 {
+                parkInfo.facilities.append(.vender)
+            }
+            
+            if toilet == 1 {
+                parkInfo.facilities.append(.toilet)
+            }
+            
+            if multipurpose == 1 {
+                parkInfo.facilities.append(.multipurpose)
+            }
             
             parkInfo.playEquipments = playEquipments
             

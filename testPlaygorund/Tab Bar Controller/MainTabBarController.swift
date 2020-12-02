@@ -95,9 +95,7 @@ extension MainTabBarController: UITableViewDelegate {
         default:
             fatalError("TabBarController のインデックスが不明")
         }
-
         
-        //vc.park = parkModel.parks[indexPath.row]
         vc.parkModelController = self
         
         vc.modalTransitionStyle = .crossDissolve
