@@ -113,12 +113,24 @@ extension MainTabBarController: UITableViewDelegate {
 // MARK: - AnnotationMapViewDataSource
 extension MainTabBarController: AnnotationMapViewDataSource {
     func numberOfAnnotations(in mapView: AnnotationMapView) -> Int {
-        return parkModel.filterdParks.count
+        if let _ = mapView.callerView as? DetailViewController {
+            // 詳細画面から呼び出した場合は全てのアノテーションを表示させる
+            return parkModel.parks.count
+        } else {
+            return parkModel.filterdParks.count
+        }
     }
     
     func annotationMapView(_ mapView: AnnotationMapView, annotationFor: Int) -> MKPointAnnotation {
         let annotation = MKPointAnnotation()
-        let park = parkModel.filterdParks[annotationFor]
+        let park: ParkInfo
+            
+        if let _ = mapView.callerView as? DetailViewController {
+            // 詳細画面から呼び出した場合は全てのアノテーションを表示させる
+            park = parkModel.parks[annotationFor]
+        } else {
+            park = parkModel.filterdParks[annotationFor]
+        }
         
         let lat = park.coordinate.latitude
         let lon = park.coordinate.longitude
@@ -131,9 +143,16 @@ extension MainTabBarController: AnnotationMapViewDataSource {
         return annotation
     }
     
-    func firstIndex(ofName name: String) -> Int? {
-        return parkModel.filterdParks.firstIndex { park -> Bool in
-            return park.name == name
+    func firstIndex(_ mapView: AnnotationMapView, ofName name: String) -> Int? {
+        if let _ = mapView.callerView as? DetailViewController {
+            // 詳細画面から呼び出した場合は全てのアノテーションを表示させる
+            return parkModel.parks.firstIndex { park -> Bool in
+                park.name == name
+            }
+        } else {
+            return parkModel.filterdParks.firstIndex { park -> Bool in
+                park.name == name
+            }
         }
     }
 }

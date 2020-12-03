@@ -127,6 +127,7 @@ class DetailViewController: UIViewController {
         
         // 近隣地図表示
         mapView.dataSource = parkModelController
+        mapView.callerView = self
         showMap()
     }
     

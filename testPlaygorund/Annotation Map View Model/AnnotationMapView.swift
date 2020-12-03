@@ -10,7 +10,7 @@ import MapKit
 protocol AnnotationMapViewDataSource: AnyObject {
     func numberOfAnnotations(in mapView: AnnotationMapView) -> Int
     func annotationMapView(_ mapView: AnnotationMapView, annotationFor: Int) -> MKPointAnnotation
-    func firstIndex(ofName name: String) -> Int?
+    func firstIndex(_ mapView: AnnotationMapView, ofName name: String) -> Int?
 }
 
 protocol AnnotationMapViewDelegate: MKMapViewDelegate {
@@ -20,6 +20,9 @@ protocol AnnotationMapViewDelegate: MKMapViewDelegate {
 
 class AnnotationMapView: MKMapView {
     weak var dataSource: AnnotationMapViewDataSource?
+    
+    /// 呼び出し側
+    weak var callerView: UIViewController?
     
     /// MapView の範囲外にあるアノテーションも読み込むか否か
     var isLoadAllAnnotations = false
@@ -86,7 +89,7 @@ class AnnotationMapView: MKMapView {
             return
         }
         
-        guard let index = dataSource.firstIndex(ofName: name) else {
+        guard let index = dataSource.firstIndex(self, ofName: name) else {
             return
         }
         
