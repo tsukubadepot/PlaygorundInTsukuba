@@ -26,17 +26,19 @@ class MainTabBarController: UITabBarController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension MainTabBarController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.selectedIndex, self.selectedViewController)
         switch self.selectedIndex {
         case 0:
-            return parkModel.parks.count
+            return parkModel.filterdParks.count
             
         case 2:
             return parkModel.likedParks.count
             
         default:
-            fatalError("TabBarController のインデックスが不明")
+            return 0
         }
     }
     
@@ -47,12 +49,14 @@ extension MainTabBarController: UITableViewDataSource {
         
         switch self.selectedIndex {
         case 0:
-            park = parkModel.parks[indexPath.row]
+            park = parkModel.filterdParks[indexPath.row]
             
         case 2:
             park = parkModel.likedParks[indexPath.row]
+            
         default:
-            fatalError("TabBarController のインデックスが不明")
+            return UITableViewCell()
+            //fatalError("TabBarController のインデックスが不明")
         }
         
         cell.imageThumbnailView.loadImage(forName: park.pictures.topImage)
@@ -77,6 +81,7 @@ extension MainTabBarController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension MainTabBarController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -85,7 +90,7 @@ extension MainTabBarController: UITableViewDelegate {
   
         switch self.selectedIndex {
         case 0:
-            vc.park = parkModel.parks[indexPath.row]
+            vc.park = parkModel.filterdParks[indexPath.row]
             
         case 2:
             vc.park = parkModel.parks.filter { park -> Bool in
@@ -105,14 +110,15 @@ extension MainTabBarController: UITableViewDelegate {
     }
 }
 
+// MARK: - AnnotationMapViewDataSource
 extension MainTabBarController: AnnotationMapViewDataSource {
     func numberOfAnnotations(in mapView: AnnotationMapView) -> Int {
-        return parkModel.parks.count
+        return parkModel.filterdParks.count
     }
     
     func annotationMapView(_ mapView: AnnotationMapView, annotationFor: Int) -> MKPointAnnotation {
         let annotation = MKPointAnnotation()
-        let park = parkModel.parks[annotationFor]
+        let park = parkModel.filterdParks[annotationFor]
         
         let lat = park.coordinate.latitude
         let lon = park.coordinate.longitude
@@ -126,22 +132,22 @@ extension MainTabBarController: AnnotationMapViewDataSource {
     }
     
     func firstIndex(ofName name: String) -> Int? {
-        return parkModel.parks.firstIndex { park -> Bool in
+        return parkModel.filterdParks.firstIndex { park -> Bool in
             return park.name == name
         }
     }
 }
 
+// MARK: - FSPagerViewDataSource
 extension MainTabBarController: FSPagerViewDataSource {
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return parkModel.parks.count
+        return parkModel.filterdParks.count
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        let park = parkModel.parks[index]
-        
-        
+        let park = parkModel.filterdParks[index]
+                
         guard let imageView = cell.imageView else {
             fatalError("cannot dequeue pagerView")
         }

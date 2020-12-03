@@ -72,8 +72,7 @@ class MapViewController: UIViewController {
         
         var mapRegion = MKCoordinateRegion()
         
-        // TODO: 将来は現在地にする
-        //mapRegion.center = CLLocationCoordinate2DMake(36.0874632, 140.0930501)
+        // 地図の中心地を現在地にする
         mapRegion.center = parkModelController!.coordinateModel.currentCoordinate
         
         let mapRegionSpan = 0.01
@@ -104,7 +103,7 @@ class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         // TODO: KingFisher の DownsamplingImageProcessor が初期読み込みでこけてしまうことへの対策。
         // フレーム値が確定していないため、ダウンサンプリングに失敗することがある。
         pagerView.reloadData()
@@ -127,7 +126,6 @@ class MapViewController: UIViewController {
             present(vc, animated: true, completion: nil)
         }
     }
-    
     
     @IBAction func moveToCurrentLocation(_ sender: UIButton) {
         if let currentCoordinate = parkModelController?.coordinateModel.currentCoordinate {
@@ -198,7 +196,7 @@ extension MapViewController: FSPagerViewDelegate {
             // TODO: ここもリファクタリングできないか？ MainTabBarController の TableView と関連づけたい
             let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             
-            vc.park = parkModelController!.parkModel.parks[index]
+            vc.park = parkModelController!.parkModel.filterdParks[index]
             vc.parkModelController = parkModelController
             
             vc.modalTransitionStyle = .crossDissolve

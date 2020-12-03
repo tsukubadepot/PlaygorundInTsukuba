@@ -29,15 +29,24 @@ class ListViewController: UIViewController {
         parkListTableView.delegate = parkModelController
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // TODO: この位置だと、DataSource で正しいインデックス番号が取得できない
+        // viewDidAppear(_:) に移動させる
+        //parkListTableView.reloadData()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         if !firstLoaded {
             // 初期データの読み込み
             //parkListTableView.refreshControl?.beginRefreshing()
             HUD.show(.labeledProgress(title: "データ読み込み中", subtitle: nil))
             fetchParkData()
             firstLoaded = true
+        } else {
+            parkListTableView.reloadData()
         }
     }
         
@@ -68,6 +77,8 @@ class ListViewController: UIViewController {
     
     @IBAction func reloadButton(_ sender: UIBarButtonItem) {
         HUD.show(.labeledProgress(title: "データ読み込み中", subtitle: nil))
+        
+        // TODO: - リロード時、検索条件をクリアするかどうかは検討が必要
         
         fetchParkData()
     }

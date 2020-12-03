@@ -22,14 +22,15 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="LGb-CB-b62"/>
-                                    <barButtonItem systemItem="search" id="Dz9-ez-602">
-                                        <connections>
-                                            <action selector="searchButton:" destination="0RJ-FA-XDy" id="cxQ-Ih-zrR"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="refresh" id="lyd-d8-vzR">
+                                    <barButtonItem image="reload" id="lyd-d8-vzR">
                                         <connections>
                                             <action selector="reloadButton:" destination="0RJ-FA-XDy" id="81V-NA-VwT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="gjl-CA-MeC"/>
+                                    <barButtonItem title="Item" image="search" id="Dz9-ez-602">
+                                        <connections>
+                                            <action selector="searchButton:" destination="0RJ-FA-XDy" id="cxQ-Ih-zrR"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -87,7 +88,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hzp-Iy-nSW"/>
-                                    <barButtonItem title="Item" id="OIz-HB-2as">
+                                    <barButtonItem image="search" id="OIz-HB-2as">
                                         <connections>
                                             <action selector="seaarchButton:" destination="d4k-bE-8tl" id="Q4t-Ly-It7"/>
                                         </connections>
@@ -690,7 +691,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtY-7K-VSk">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem title="戻る" id="NEB-n2-q5q"/>
+                                    <barButtonItem title="戻る" id="NEB-n2-q5q">
+                                        <connections>
+                                            <action selector="backButton:" destination="vUQ-1M-JLl" id="gju-T1-HDX"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検索条件設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASn-l5-Sfc">
@@ -793,6 +798,8 @@
         <image name="favorite" width="22.5" height="22.5"/>
         <image name="list" width="22.5" height="22.5"/>
         <image name="map" width="22.5" height="22.5"/>
+        <image name="reload" width="22.5" height="22.5"/>
+        <image name="search" width="22.5" height="22.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

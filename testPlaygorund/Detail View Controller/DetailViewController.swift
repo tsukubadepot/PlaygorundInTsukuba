@@ -190,21 +190,6 @@ class DetailViewController: UIViewController {
 
     /// 設備情報の表示
     fileprivate func setFacilities() {
-//        // 駐車場
-//        parkingImageView.image = park.facilities.parking == 1 ? UIImage(named: "parking") : UIImage(named: "no-parking")
-//
-//        // トイレ
-//        toiletImageView.image = park.facilities.toilet == 1 ? UIImage(named: "toilet") : UIImage(named: "no-toilet")
-//
-//        // 多目的トイレ
-//        multiPurposeImageView.image = park.facilities.multipurpose == 1 ? UIImage(named: "bf") : UIImage(named: "no-bf")
-//
-//        // 近隣店舗
-//        storeImageView.image = park.facilities.convenience == 1 ? UIImage(named: "shop") : UIImage(named: "no-shop")
-//
-//        // 自動販売機
-//        venderImageView.image = park.facilities.vender == 1 ? UIImage(named: "vender") : UIImage(named: "no-vender")
-//
         // 駐車場
         parkingImageView.image = park.facilities.contains(.parking) ? UIImage(named: "parking") : UIImage(named: "no-parking")
         
@@ -219,7 +204,6 @@ class DetailViewController: UIViewController {
         
         // 自動販売機
         venderImageView.image = park.facilities.contains(.vender) ? UIImage(named: "vender") : UIImage(named: "no-vender")
-
     }
     
     /// 詳細コメントの表示

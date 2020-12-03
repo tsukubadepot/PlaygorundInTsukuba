@@ -11,7 +11,7 @@ import UIKit
 class FavoriteViewController: UIViewController {
     @IBOutlet weak var favoriteTableView: UITableView!
     
-    var mainTabBarController: MainTabBarController?
+    weak var mainTabBarController: MainTabBarController?
     
     override func viewDidLoad() {
         super.viewDidLoad()

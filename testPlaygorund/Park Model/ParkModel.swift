@@ -171,7 +171,7 @@ class ParkModel {
     /// - Parameter parkName: 公園名
     /// - Returns: 配列内のインデックス。公園名が存在しないときには nil
     func index(of parkName: String) -> Int? {
-        return parks.firstIndex { parkInfo -> Bool in
+        return filterdParks.firstIndex { parkInfo -> Bool in
             return parkInfo.name == parkName
         }
     }
@@ -180,11 +180,11 @@ class ParkModel {
     /// - Parameter index: インデックス
     /// - Returns: 公園名。インデックスが範囲外の場合には nil
     func getParkName(of index: Int) -> String? {
-        if index < 0 || index >= parks.count {
+        if index < 0 || index >= filterdParks.count {
             return nil
         }
         
-        return parks[index].name
+        return filterdParks[index].name
     }
     
     func filter() {

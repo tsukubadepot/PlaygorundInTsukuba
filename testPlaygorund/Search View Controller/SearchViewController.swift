@@ -106,6 +106,12 @@ class SearchViewController: UIViewController {
         }
     }
     
+    /// 戻るボタン
+    /// - Parameter sender: sender
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func showResultButton(_ sender: UIButton) {
         
         // 呼び出し側が　FavoriteViewController だった場合は
@@ -113,19 +119,24 @@ class SearchViewController: UIViewController {
         if let callerViewController = parkModelController.viewControllers?[parkModelController.selectedIndex] {
             switch callerViewController {
             case is ListViewController:
-                print(callerViewController)
-                
+                // 一覧表示を更新する
+                let vc = callerViewController as! ListViewController
+                vc.parkListTableView.reloadData()
+
             case is MapViewController:
-                print(callerViewController)
+                //
+                let vc = callerViewController as! MapViewController
+                // 前回のアノテーションを一度削除し、検索条件に応じて再度表示しなおす
+                let annotations = vc.annotationMapView.annotations
+                vc.annotationMapView.removeAnnotations(annotations)
+                vc.annotationMapView.loadAllAnnotations()
+                // pagerView の再読み込み
+                vc.pagerView.reloadData()
+
             default:
                 fatalError("cannot guess caller View Controller")
             }
         }
-        
-        
-//            callerViewController.favoriteTableView.reloadData()
-//        }
-
         
         dismiss(animated: true, completion: nil)
     }
