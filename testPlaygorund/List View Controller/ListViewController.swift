@@ -43,6 +43,10 @@ class ListViewController: UIViewController {
             HUD.hide { _ in
                 HUD.flash(.success, delay: 1.0)
             }
+
+            // 検索条件に従って検索を実行
+            self.mainTabBarController?.parkModel.filter()
+
             self.parkListTableView.reloadData()
         } errorHandler: { error in
             HUD.hide { _ in

@@ -14,6 +14,15 @@ class ParkModel {
     /// 公園に関する生データ
     var parks:[ParkInfo] = []
     
+    /// フィルタ後の公園
+    var filterdParks: [ParkInfo] = []
+    
+    /// 設備情報に関する検索条件
+    var facilitiesQuery: [Facilites] = []
+    
+    /// 遊具に関する検索条件
+    var playEquipmentsQuery: [String] = []
+    
     /// お気に入りに入った公園
     var likedParks: [ParkInfo] = []
     
@@ -176,5 +185,43 @@ class ParkModel {
         }
         
         return parks[index].name
+    }
+    
+    func filter() {
+        // 設備で検索
+        if facilitiesQuery.isEmpty {
+            // 設備指定が空だった場合
+            filterdParks = parks
+        } else {
+            // 設備指定があった場合
+            // 1. ある公園の設備が指定された条件に含まれていれば true に map
+            // 2. true の個数をカウントし、それが検索条件数と一致するか判断
+            filterdParks = parks.filter { park  in
+                park.facilities.map {
+                    facilitiesQuery.contains($0)
+                }.filter {
+                    $0 == true
+                }.count == facilitiesQuery.count
+            }
+        }
+        
+        if !playEquipmentsQuery.isEmpty {
+            // 指定された遊具があるかどうか
+            filterdParks = filterdParks.filter { park in
+                // equipments で指定された遊具名の方が短いので、それを考慮
+                // Array<String> の contains は完全一致となる。従って、部分一致、かつ複数の単語を AND 検索するには
+                // 独自のメソッドを検討する必要がある。
+                // 1. 引数で指定された遊具が全てあるか否か（allSatisfy)
+                // 2. ある公園の遊具について、
+                // 2-1. map で String を逐次取り出し
+                // 2-2. 取り出した String に equipments が含まれるかチェックし
+                // 2-3. 結果に true が含まれているか調べる
+                playEquipmentsQuery.allSatisfy { element in
+                    park.playEquipments.map {
+                        $0.contains(element)
+                    }.contains(true)
+                }
+            }
+        }
     }
 }
