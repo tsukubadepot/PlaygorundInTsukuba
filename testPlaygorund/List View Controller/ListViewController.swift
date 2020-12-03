@@ -71,6 +71,9 @@ class ListViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
             vc.parkModelController = parkModelController
             
+            vc.modalPresentationStyle = .custom
+            vc.transitioningDelegate = self
+            
             present(vc, animated: true, completion: nil)
         }
     }
@@ -81,5 +84,19 @@ class ListViewController: UIViewController {
         // TODO: - リロード時、検索条件をクリアするかどうかは検討が必要
         
         fetchParkData()
+    }
+}
+
+extension ListViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideAnimator(state: .dismissMenu, duration: 0.5)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideAnimator(state: .appearMenu, duration: 0.5)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return PresentationController(presentedViewController: presented, presenting: presenting, viewMargin: CGPoint(x: 50, y: 100))
     }
 }

@@ -711,12 +711,12 @@
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-4T-qZ7">
-                                        <rect key="frame" x="16" y="7.5" width="382" height="29"/>
+                                        <rect key="frame" x="16" y="8.5" width="382" height="27"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7a-8h-fAH">
-                                                <rect key="frame" x="0.0" y="0.0" width="178" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="27"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="絞り込み解除"/>
                                                 <connections>
@@ -724,9 +724,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34g-RT-cn3">
-                                                <rect key="frame" x="204" y="0.0" width="178" height="29"/>
+                                                <rect key="frame" x="204" y="0.0" width="178" height="27"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="結果表示"/>
                                                 <connections>

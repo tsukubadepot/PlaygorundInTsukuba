@@ -123,6 +123,9 @@ class MapViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
             vc.parkModelController = parkModelController
             
+            vc.modalPresentationStyle = .custom
+            vc.transitioningDelegate = self
+            
             present(vc, animated: true, completion: nil)
         }
     }
@@ -236,4 +239,19 @@ extension MapViewController: FSPagerViewDelegate {
     // 前後含めて最後に表示された pagerView の index が表示されるので注意する
     //    func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
     //    }
+}
+
+// MARK: UIViewControllerTransitioningDelegate
+extension MapViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideAnimator(state: .dismissMenu, duration: 0.5)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideAnimator(state: .appearMenu, duration: 0.5)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return PresentationController(presentedViewController: presented, presenting: presenting, viewMargin: CGPoint(x: 50, y: 100))
+    }
 }

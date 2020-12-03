@@ -92,7 +92,7 @@ class SearchViewController: UIViewController {
     /// TableView のヘッダにつけたスイッチの状態が変化したときに呼ばれるメソッド
     /// - Parameter sender: sender UI
     @objc func switchChanged(_ sender: UISwitch) {
-        if let headerView = sender.superview as? SearchHeaderView {
+        if let headerView = sender.superview?.superview as? SearchHeaderView {
             let section = headerView.tag - 1
             
             headerState[section].isOpen.toggle()

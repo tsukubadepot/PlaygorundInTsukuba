@@ -18,6 +18,8 @@
 		BF76AB782578C14B000F62BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB772578C14B000F62BA /* SearchViewController.swift */; };
 		BF76AB7C2578C51A000F62BA /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */; };
 		BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */; };
+		BF76ABB125791BD4000F62BA /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76ABB025791BD4000F62BA /* PresentationController.swift */; };
+		BF76ABB525791C31000F62BA /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76ABB425791C31000F62BA /* SlideAnimator.swift */; };
 		BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2023FBFE1400E17320 /* StringExtensions.swift */; };
 		BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2223FBFFF600E17320 /* XLSHandling.swift */; };
 		BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */; };
@@ -54,6 +56,8 @@
 		BF76AB772578C14B000F62BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
+		BF76ABB025791BD4000F62BA /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		BF76ABB425791C31000F62BA /* SlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
 		BFA19E2023FBFE1400E17320 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "testPlaygorund/Old files/StringExtensions.swift"; sourceTree = SOURCE_ROOT; };
 		BFA19E2223FBFFF600E17320 /* XLSHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XLSHandling.swift; path = "testPlaygorund/Old files/XLSHandling.swift"; sourceTree = SOURCE_ROOT; };
 		BFB7BE7D23F4275C00A89A3D /* Park in Tsukuba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Park in Tsukuba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +160,15 @@
 			path = "Search View Controller";
 			sourceTree = "<group>";
 		};
+		BF76ABAF25791BA2000F62BA /* Presentation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF76ABB025791BD4000F62BA /* PresentationController.swift */,
+				BF76ABB425791C31000F62BA /* SlideAnimator.swift */,
+			);
+			path = "Presentation Controller";
+			sourceTree = "<group>";
+		};
 		BFB7BE7423F4275C00A89A3D = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +199,7 @@
 				BFF8A66725750787009EED2A /* Location Model */,
 				BF0EA7BD256E1A9600609287 /* Park Model */,
 				BFF8A66625750741009EED2A /* Annotation Map View Model */,
+				BF76ABAF25791BA2000F62BA /* Presentation Controller */,
 				BFF8A62F25711961009EED2A /* Extensions */,
 				BF0EA787256DE6B300609287 /* APIKey.swift */,
 				BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */,
@@ -376,6 +390,7 @@
 			files = (
 				BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */,
 				BF0EA7E9256E1CC400609287 /* ParkModel.swift in Sources */,
+				BF76ABB525791C31000F62BA /* SlideAnimator.swift in Sources */,
 				BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */,
 				BFF8A63525712CA0009EED2A /* CLLocationCoordinate2DExtension.swift in Sources */,
 				BF0EA7BF256E1AB300609287 /* ParkInfo.swift in Sources */,
@@ -394,6 +409,7 @@
 				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,
 				BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */,
 				BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */,
+				BF76ABB125791BD4000F62BA /* PresentationController.swift in Sources */,
 				BFF8A6312571198D009EED2A /* UIImageViewExtension.swift in Sources */,
 				BFB7BE8323F4275C00A89A3D /* SceneDelegate.swift in Sources */,
 			);

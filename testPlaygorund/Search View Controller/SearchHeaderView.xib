@@ -15,28 +15,40 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zug-TB-LbQ">
-                    <rect key="frame" x="20" y="19.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-IX-CtX">
-                    <rect key="frame" x="345" y="14.5" width="51" height="31"/>
-                </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qR-Yh-1Dk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zug-TB-LbQ">
+                            <rect key="frame" x="16" y="19.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-IX-CtX">
+                            <rect key="frame" x="349" y="14.5" width="51" height="31"/>
+                        </switch>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ZAa-IX-CtX" secondAttribute="trailing" constant="16" id="bIk-Ws-Bq7"/>
+                        <constraint firstItem="zug-TB-LbQ" firstAttribute="centerY" secondItem="2qR-Yh-1Dk" secondAttribute="centerY" id="nRg-yG-GBh"/>
+                        <constraint firstItem="zug-TB-LbQ" firstAttribute="leading" secondItem="2qR-Yh-1Dk" secondAttribute="leading" constant="16" id="rOF-Ra-3A2"/>
+                        <constraint firstItem="ZAa-IX-CtX" firstAttribute="centerY" secondItem="2qR-Yh-1Dk" secondAttribute="centerY" id="xAw-11-tdE"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="zug-TB-LbQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="5Jj-20-5EO"/>
-                <constraint firstItem="ZAa-IX-CtX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yln-eh-zyy"/>
-                <constraint firstItem="zug-TB-LbQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bG4-Zb-UAL"/>
-                <constraint firstAttribute="trailingMargin" secondItem="ZAa-IX-CtX" secondAttribute="trailing" id="xxT-sM-mUL"/>
+                <constraint firstItem="2qR-Yh-1Dk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2kX-kO-njD"/>
+                <constraint firstItem="2qR-Yh-1Dk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aEi-cr-o5e"/>
+                <constraint firstAttribute="bottom" secondItem="2qR-Yh-1Dk" secondAttribute="bottom" id="bZe-Gs-Igw"/>
+                <constraint firstAttribute="trailing" secondItem="2qR-Yh-1Dk" secondAttribute="trailing" id="s93-tR-FP9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="headerSwitch" destination="ZAa-IX-CtX" id="JdJ-g5-ide"/>
-                <outlet property="headerTitleView" destination="zug-TB-LbQ" id="TJT-dQ-3tw"/>
+                <outlet property="headerSwitch" destination="ZAa-IX-CtX" id="SFu-AG-kz0"/>
+                <outlet property="headerTitleView" destination="zug-TB-LbQ" id="hDj-7m-QgN"/>
             </connections>
             <point key="canvasLocation" x="141" y="93"/>
         </view>
@@ -44,6 +56,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
