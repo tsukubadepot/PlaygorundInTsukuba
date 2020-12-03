@@ -15,6 +15,9 @@
 		BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7EC256E21C900609287 /* ListViewController.swift */; };
 		BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */; };
 		BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */; };
+		BF76AB782578C14B000F62BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB772578C14B000F62BA /* SearchViewController.swift */; };
+		BF76AB7C2578C51A000F62BA /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */; };
+		BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */; };
 		BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2023FBFE1400E17320 /* StringExtensions.swift */; };
 		BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2223FBFFF600E17320 /* XLSHandling.swift */; };
 		BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */; };
@@ -48,6 +51,9 @@
 		BF0EA7EC256E21C900609287 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = "testPlaygorund/List View Controller/ListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
 		BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkTableViewCell.xib; sourceTree = "<group>"; };
+		BF76AB772578C14B000F62BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
+		BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
 		BFA19E2023FBFE1400E17320 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "testPlaygorund/Old files/StringExtensions.swift"; sourceTree = SOURCE_ROOT; };
 		BFA19E2223FBFFF600E17320 /* XLSHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XLSHandling.swift; path = "testPlaygorund/Old files/XLSHandling.swift"; sourceTree = SOURCE_ROOT; };
 		BFB7BE7D23F4275C00A89A3D /* Park in Tsukuba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Park in Tsukuba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,16 @@
 			path = "List View Controller";
 			sourceTree = "<group>";
 		};
+		BF76AB762578C103000F62BA /* Search View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF76AB772578C14B000F62BA /* SearchViewController.swift */,
+				BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */,
+				BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */,
+			);
+			path = "Search View Controller";
+			sourceTree = "<group>";
+		};
 		BFB7BE7423F4275C00A89A3D = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,7 @@
 				BFF8A5DC2570A3E9009EED2A /* Map View Controller */,
 				BFF8A66C2575CF58009EED2A /* Favorite View Controller */,
 				BFF8A62A25710586009EED2A /* Detail View Controller */,
+				BF76AB762578C103000F62BA /* Search View Controller */,
 				BFF8A66725750787009EED2A /* Location Model */,
 				BF0EA7BD256E1A9600609287 /* Park Model */,
 				BFF8A66625750741009EED2A /* Annotation Map View Model */,
@@ -302,6 +319,7 @@
 				BFB7BE8D23F4275F00A89A3D /* LaunchScreen.storyboard in Resources */,
 				BF0EA7A6256DEE0000609287 /* MainV2.storyboard in Resources */,
 				BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */,
+				BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */,
 				BFB7BE8A23F4275F00A89A3D /* Assets.xcassets in Resources */,
 				BFB7BE8823F4275C00A89A3D /* Main.storyboard in Resources */,
 			);
@@ -363,6 +381,7 @@
 				BF0EA7BF256E1AB300609287 /* ParkInfo.swift in Sources */,
 				BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */,
 				BF0EA788256DE6B300609287 /* APIKey.swift in Sources */,
+				BF76AB7C2578C51A000F62BA /* SearchHeaderView.swift in Sources */,
 				BF0EA7B9256DF19400609287 /* MainTabBarController.swift in Sources */,
 				BFF8A5DF2570A425009EED2A /* MapViewController.swift in Sources */,
 				BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */,
@@ -371,6 +390,7 @@
 				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
 				BFF8A66E2575CF6D009EED2A /* FavoriteViewController.swift in Sources */,
+				BF76AB782578C14B000F62BA /* SearchViewController.swift in Sources */,
 				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,
 				BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */,
 				BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */,

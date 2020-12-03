@@ -120,6 +120,15 @@ class MapViewController: UIViewController {
         annotationMapView.loadAllAnnotations()
     }
     
+    @IBAction func seaarchButton(_ sender: UIBarButtonItem) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
+            vc.parkModelController = parkModelController
+            
+            present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    
     @IBAction func moveToCurrentLocation(_ sender: UIButton) {
         if let currentCoordinate = parkModelController?.coordinateModel.currentCoordinate {
             annotationMapView.setCenter(currentCoordinate, animated: true)
