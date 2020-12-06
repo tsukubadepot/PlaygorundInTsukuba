@@ -20,8 +20,13 @@ class SearchViewController: UIViewController {
     var facilitiesSection: [(title: Facilites, isOn: Bool)] =
         [(.parking, false), (.toilet, false), (.multipurpose, false), (.convenience, false), (.vender, false)]
     var equipmentSection: [(title: String, isOn: Bool)] =
-        [("ブランコ", false), ("すべり台", false), ("鉄棒", false), ("砂場", false) ]
-
+    //    [("ブランコ", false), ("すべり台", false), ("鉄棒", false), ("砂場", false) ]
+        [("FRP遊具", false), ("スプリング遊具", false), ("コンクリート遊具", false), ("木製遊具", false), ("ディッグウッド", false), ("コンビネーション", false), ("ブランコ", false),
+         ("すべり台", false), ("コンクリートすべり", false), ("砂場", false), ("シーソー", false), ("回転ハッピー", false), ("うんてい", false), ("鉄棒", false), ("登り棒", false),
+         ("トンネル", false), ("キャッスルクレーン", false), ("グローブジャングル", false), ("ジャングルジム", false), ("ロープウェイ", false), ("ネット渡り", false),
+         ("ネットクライム", false), ("バスケットゴール", false), ("健康遊具", false), ("広場", false), ("ランニングコース", false), ("遊歩道", false),
+         ("テニスコート", false), ("野球場", false)]
+    
     // MARK: - UITableView
     @IBOutlet weak var searchTableView: UITableView! {
         didSet {
