@@ -29,7 +29,6 @@ class MainTabBarController: UITabBarController {
 // MARK: - UITableViewDataSource
 extension MainTabBarController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.selectedIndex, self.selectedViewController)
         switch self.selectedIndex {
         case 0:
             return parkModel.filterdParks.count
