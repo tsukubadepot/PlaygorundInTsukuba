@@ -189,7 +189,7 @@ class DetailViewController: UIViewController {
     
     // MARK: - private methods
     /// ヘッダ部の表示
-    fileprivate func setHeader() {
+    private func setHeader() {
         // ヘッダ部
         parkNameLabel.text = park.name
         parkAddressLabel.text = park.address
@@ -210,7 +210,7 @@ class DetailViewController: UIViewController {
     }
 
     /// 設備情報の表示
-    fileprivate func setFacilities() {
+    private func setFacilities() {
         // 駐車場
         parkingImageView.image = park.facilities.contains(.parking) ? UIImage(named: "parking") : UIImage(named: "no-parking")
         
@@ -228,7 +228,7 @@ class DetailViewController: UIViewController {
     }
     
     /// 詳細コメントの表示
-    fileprivate func setDescriptionComment() {
+    private func setDescriptionComment() {
         var attributes: [NSAttributedString.Key: Any] = [:]
         let paragraphStyle = NSMutableParagraphStyle()
         let descriptionText = park.comments.description.isEmpty ? "コメント未入力" : park.comments.description
@@ -240,7 +240,7 @@ class DetailViewController: UIViewController {
     }
 
     /// 公園詳細画像の表示
-    fileprivate func setSubImages() {
+    private func setSubImages() {
         subImageView1.loadImage(forName: park.pictures.subImage1)
         subImageView2.loadImage(forName: park.pictures.subImage2)
     }
@@ -251,7 +251,7 @@ class DetailViewController: UIViewController {
         showAnnotations()
     }
     
-    fileprivate func setRegion() {
+    private func setRegion() {
         var mapRegion = MKCoordinateRegion()
         
         let mapRegionSpan = 0.01
