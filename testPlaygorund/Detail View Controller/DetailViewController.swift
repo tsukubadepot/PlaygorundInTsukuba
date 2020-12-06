@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import MapKit
+import PKHUD
 
 class DetailViewController: UIViewController {
     // MARK: - local properties
@@ -22,6 +23,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var parkNameLabel: UILabel!
     /// 公園の住所
     @IBOutlet weak var parkAddressLabel: UILabel!
+    /// 地図に表示する住所
+    @IBOutlet weak var parkAddressLabel2: UILabel!
     /// トップイメージ
     @IBOutlet weak var topImage: UIImageView! {
         didSet {
@@ -97,6 +100,14 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var copyAddress: UIButton! {
+        didSet {
+            copyAddress.layer.borderWidth = 1
+            copyAddress.layer.borderColor = UIColor.gray.cgColor
+            copyAddress.layer.cornerRadius = copyAddress.frame.height / 5
+        }
+    }
+    
     @IBOutlet weak var showAllAnnotationsSwitch: UISwitch! {
         didSet {
             showAllAnnotationsSwitch.isOn = false
@@ -163,6 +174,14 @@ class DetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    /// 住所をクリップボードにコピー
+    @IBAction func copyAddressButton(_ sender: UIButton) {
+        UIPasteboard.general.string = park.address
+        
+        HUD.flash(.labeledSuccess(title: "住所をコピーしました。", subtitle: park.address), delay: 2.0)
+    }
+    
+    
     /// 周辺公園表示のスイッチが切り替わった場合
     @IBAction func showAnnotationSelected(_ sender: UISwitch) {
         showAnnotations()
@@ -174,6 +193,7 @@ class DetailViewController: UIViewController {
         // ヘッダ部
         parkNameLabel.text = park.name
         parkAddressLabel.text = park.address
+        parkAddressLabel2.text = park.address
         
         // トップ画像
         topImage.loadImage(forName: park.pictures.topImage)

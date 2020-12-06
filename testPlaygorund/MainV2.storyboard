@@ -233,7 +233,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-V3-Y1l">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1870.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1899"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tne-dP-HEb" userLabel="ヘッダ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
@@ -552,7 +552,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnO-fI-NcD" userLabel="周辺地図">
-                                                <rect key="frame" x="0.0" y="1365" width="414" height="443.5"/>
+                                                <rect key="frame" x="0.0" y="1365" width="414" height="472"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="周辺地図" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U63-C8-Ufn">
                                                         <rect key="frame" x="16" y="6" width="382" height="22.5"/>
@@ -564,20 +564,29 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-QA-sqI" userLabel="住所">
+                                                        <rect key="frame" x="24" y="34.5" width="280" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22.5" id="uQt-1d-aDE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4vb-Yd-Vrw" customClass="AnnotationMapView" customModule="Park_in_Tsukuba" customModuleProvider="target">
-                                                        <rect key="frame" x="24" y="34.5" width="366" height="366"/>
+                                                        <rect key="frame" x="24" y="63" width="366" height="366"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="4vb-Yd-Vrw" secondAttribute="height" id="mwZ-XH-rKV"/>
                                                         </constraints>
                                                     </mapView>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-MD-4Ft">
-                                                        <rect key="frame" x="341" y="406.5" width="51" height="31"/>
+                                                        <rect key="frame" x="341" y="435" width="51" height="31"/>
                                                         <connections>
                                                             <action selector="showAnnotationSelected:" destination="8rH-0g-wCa" eventType="valueChanged" id="ldB-lx-S23"/>
                                                         </connections>
                                                     </switch>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近隣の公園も表示する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-E4-uFq">
-                                                        <rect key="frame" x="24" y="410.5" width="140" height="22.5"/>
+                                                        <rect key="frame" x="24" y="439" width="140" height="22.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22.5" id="Jvk-IL-JvA"/>
                                                             <constraint firstAttribute="height" constant="22.5" id="kBe-GH-L0d"/>
@@ -586,24 +595,41 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIC-2M-bJK">
+                                                        <rect key="frame" x="310" y="34.5" width="80" height="22.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="C2t-GF-8sv"/>
+                                                            <constraint firstAttribute="height" constant="22.5" id="JeC-dc-pTG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                                        <state key="normal" title="住所をコピー"/>
+                                                        <connections>
+                                                            <action selector="copyAddressButton:" destination="8rH-0g-wCa" eventType="touchUpInside" id="Z4y-yy-erl"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
+                                                    <constraint firstItem="hqa-QA-sqI" firstAttribute="leading" secondItem="YnO-fI-NcD" secondAttribute="leading" constant="24" id="0ZE-Fe-B08"/>
                                                     <constraint firstItem="4vb-Yd-Vrw" firstAttribute="leading" secondItem="YnO-fI-NcD" secondAttribute="leading" constant="24" id="4mU-C3-hCa"/>
                                                     <constraint firstItem="2tw-MD-4Ft" firstAttribute="top" secondItem="4vb-Yd-Vrw" secondAttribute="bottom" constant="6" id="DtI-nS-W99"/>
                                                     <constraint firstItem="U63-C8-Ufn" firstAttribute="top" secondItem="YnO-fI-NcD" secondAttribute="top" constant="6" id="F85-Vd-5tg"/>
+                                                    <constraint firstItem="hqa-QA-sqI" firstAttribute="top" secondItem="U63-C8-Ufn" secondAttribute="bottom" constant="6" id="KdZ-aT-Evu"/>
                                                     <constraint firstAttribute="trailing" secondItem="4vb-Yd-Vrw" secondAttribute="trailing" constant="24" id="Mhh-qr-TXp"/>
                                                     <constraint firstItem="2tw-MD-4Ft" firstAttribute="centerY" secondItem="jfs-E4-uFq" secondAttribute="centerY" id="OUg-My-gVm"/>
                                                     <constraint firstItem="2tw-MD-4Ft" firstAttribute="trailing" secondItem="4vb-Yd-Vrw" secondAttribute="trailing" id="T1n-Qk-h80"/>
                                                     <constraint firstAttribute="bottom" secondItem="2tw-MD-4Ft" secondAttribute="bottom" constant="6" id="T5j-ab-cDf"/>
+                                                    <constraint firstItem="hqa-QA-sqI" firstAttribute="centerY" secondItem="rIC-2M-bJK" secondAttribute="centerY" id="Vs0-ud-fBa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rIC-2M-bJK" secondAttribute="trailing" constant="24" id="W8F-PC-xai"/>
                                                     <constraint firstItem="jfs-E4-uFq" firstAttribute="leading" secondItem="4vb-Yd-Vrw" secondAttribute="leading" id="i2m-JX-GZx"/>
                                                     <constraint firstItem="U63-C8-Ufn" firstAttribute="leading" secondItem="YnO-fI-NcD" secondAttribute="leading" constant="16" id="oH8-Eg-Tfi"/>
+                                                    <constraint firstItem="rIC-2M-bJK" firstAttribute="leading" secondItem="hqa-QA-sqI" secondAttribute="trailing" constant="6" id="tWn-jv-hF2"/>
                                                     <constraint firstAttribute="trailing" secondItem="U63-C8-Ufn" secondAttribute="trailing" constant="16" id="uWU-G2-173"/>
-                                                    <constraint firstItem="4vb-Yd-Vrw" firstAttribute="top" secondItem="U63-C8-Ufn" secondAttribute="bottom" constant="6" id="vu2-hb-0Ax"/>
+                                                    <constraint firstItem="4vb-Yd-Vrw" firstAttribute="top" secondItem="hqa-QA-sqI" secondAttribute="bottom" constant="6" id="wCc-ZZ-lBn"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdQ-v6-Ze4" userLabel="問題報告ボタン">
-                                                <rect key="frame" x="0.0" y="1808.5" width="414" height="62"/>
+                                                <rect key="frame" x="0.0" y="1837" width="414" height="62"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19I-kE-2DY">
                                                         <rect key="frame" x="16" y="6" width="382" height="50"/>
@@ -657,13 +683,15 @@
                     </view>
                     <connections>
                         <outlet property="commentLabel" destination="Rqu-Mm-sOO" id="RdM-cH-6BI"/>
+                        <outlet property="copyAddress" destination="rIC-2M-bJK" id="va7-Tr-ze1"/>
                         <outlet property="descriptionLabel" destination="jCs-fx-09v" id="oGR-AA-uuN"/>
                         <outlet property="equipmentTable" destination="CMB-dr-UlZ" id="0ld-ai-LQP"/>
                         <outlet property="equipmentTableHeightConstraint" destination="6cn-bS-BIn" id="EMx-46-gfe"/>
                         <outlet property="likeButton" destination="A9P-9y-17F" id="QGV-DE-vwv"/>
                         <outlet property="mapView" destination="4vb-Yd-Vrw" id="DZo-fi-Z5P"/>
                         <outlet property="multiPurposeImageView" destination="EnK-VR-5Zz" id="LnL-v9-8N6"/>
-                        <outlet property="parkAddressLabel" destination="0fr-zN-taP" id="GxQ-fG-eNd"/>
+                        <outlet property="parkAddressLabel" destination="0fr-zN-taP" id="fsn-IR-9Ac"/>
+                        <outlet property="parkAddressLabel2" destination="hqa-QA-sqI" id="2a8-Bu-tao"/>
                         <outlet property="parkNameLabel" destination="sGc-fS-5Uz" id="DwZ-oz-mdT"/>
                         <outlet property="parkingImageView" destination="sRw-Gu-OXX" id="7Hr-Wa-vtI"/>
                         <outlet property="sendCommentButton" destination="19I-kE-2DY" id="9k3-u3-gFl"/>
