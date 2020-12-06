@@ -665,6 +665,9 @@
                                                         <state key="normal" title="問題報告はこちらから">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="sendCommentButton:" destination="8rH-0g-wCa" eventType="touchUpInside" id="ZmZ-1o-sou"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

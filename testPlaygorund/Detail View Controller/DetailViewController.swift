@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 import Kingfisher
 import MapKit
 import PKHUD
@@ -181,10 +182,28 @@ class DetailViewController: UIViewController {
         HUD.flash(.labeledSuccess(title: "住所をコピーしました。", subtitle: park.address), delay: 2.0)
     }
     
-    
     /// 周辺公園表示のスイッチが切り替わった場合
     @IBAction func showAnnotationSelected(_ sender: UISwitch) {
         showAnnotations()
+    }
+    
+    /// メール送信
+    @IBAction func sendCommentButton(_ sender: UIButton) {
+        if !MFMailComposeViewController.canSendMail() {
+            HUD.flash(.labeledError(title: "メール送信不可", subtitle: "メールの設定を行ってください。"), delay: 5.0)
+            return
+        }
+        
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+         
+        // Configure the fields of the interface.
+        composeVC.setToRecipients(["parksintsukuba@tsukubadepot.net"])
+        composeVC.setSubject(park.name + "問題報告")
+        composeVC.setMessageBody("以下に報告内容を記載し、メールを送信してください。", isHTML: false)
+         
+        // Present the view controller modally.
+        present(composeVC, animated: true, completion: nil)
     }
     
     // MARK: - private methods
@@ -296,5 +315,14 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     // Cell の高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
+    }
+}
+
+// MARK: - MFMailComposeViewControllerDelegate
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true) {
+            HUD.flash(.label("メールを送信しました。"), delay: 2.0)
+        }
     }
 }
