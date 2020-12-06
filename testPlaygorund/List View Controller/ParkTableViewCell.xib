@@ -29,8 +29,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XN-up-d0K">
-                        <rect key="frame" x="150" y="35" width="154" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XN-up-d0K">
+                        <rect key="frame" x="150" y="32" width="154" height="12"/>
                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkW-70-fYb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkW-70-fYb">
                         <rect key="frame" x="150" y="65" width="154" height="12"/>
                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
                         <nil key="textColor"/>
@@ -56,12 +56,12 @@
                     <constraint firstAttribute="trailingMargin" secondItem="kkW-70-fYb" secondAttribute="trailing" id="Gej-vh-dF7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="gZP-I6-22h" secondAttribute="trailing" id="IHl-dP-7bS"/>
                     <constraint firstItem="gHQ-1n-US6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="IT7-0z-CNk"/>
-                    <constraint firstItem="8XN-up-d0K" firstAttribute="top" secondItem="gZP-I6-22h" secondAttribute="bottom" constant="6" id="UVE-9n-faq"/>
+                    <constraint firstItem="8XN-up-d0K" firstAttribute="top" secondItem="gZP-I6-22h" secondAttribute="bottom" constant="3" id="UVE-9n-faq"/>
                     <constraint firstItem="gHQ-1n-US6" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="Vk1-Aw-2vS"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kkW-70-fYb" secondAttribute="bottom" priority="900" constant="8" id="Wxu-xt-icU"/>
                     <constraint firstItem="gZP-I6-22h" firstAttribute="leading" secondItem="gHQ-1n-US6" secondAttribute="trailing" constant="6" id="Ybq-oS-mLm"/>
                     <constraint firstItem="kkW-70-fYb" firstAttribute="top" secondItem="LAp-oY-waM" secondAttribute="bottom" constant="3" id="Zb8-FG-1r8"/>
-                    <constraint firstItem="LAp-oY-waM" firstAttribute="top" secondItem="8XN-up-d0K" secondAttribute="bottom" constant="3" id="eIP-Lm-Y0z"/>
+                    <constraint firstItem="LAp-oY-waM" firstAttribute="top" secondItem="8XN-up-d0K" secondAttribute="bottom" constant="6" id="eIP-Lm-Y0z"/>
                     <constraint firstItem="LAp-oY-waM" firstAttribute="leading" secondItem="8XN-up-d0K" secondAttribute="leading" id="hct-9a-FoP"/>
                     <constraint firstItem="gHQ-1n-US6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kOh-Fl-Iri"/>
                     <constraint firstItem="8XN-up-d0K" firstAttribute="leading" secondItem="gZP-I6-22h" secondAttribute="leading" id="qdf-Hi-3EC"/>
