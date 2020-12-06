@@ -166,6 +166,30 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="euO-q0-yKX">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" id="LRX-Vd-uDe">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="396.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LRX-Vd-uDe" id="dKm-TL-ZdX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="396.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favoritecell" translatesAutoresizingMaskIntoConstraints="NO" id="13M-de-VDx">
+                                                    <rect key="frame" x="20" y="11" width="374" height="374.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="13M-de-VDx" secondAttribute="height" id="WoA-MO-E9w"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="13M-de-VDx" firstAttribute="leading" secondItem="dKm-TL-ZdX" secondAttribute="leadingMargin" id="FOu-SK-ynH"/>
+                                                <constraint firstItem="13M-de-VDx" firstAttribute="top" secondItem="dKm-TL-ZdX" secondAttribute="topMargin" id="IcK-rL-ukn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="13M-de-VDx" secondAttribute="trailing" id="a5n-gM-0bw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="13M-de-VDx" secondAttribute="bottom" id="iTc-Ay-A62"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xMA-vZ-KJu"/>
@@ -189,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6E-TN-WHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-339" y="877"/>
+            <point key="canvasLocation" x="-339.13043478260875" y="876.5625"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="ioq-6c-E94">
@@ -824,6 +848,7 @@
     <resources>
         <image name="current" width="50" height="50"/>
         <image name="favorite" width="22.5" height="22.5"/>
+        <image name="favoritecell" width="321" height="321"/>
         <image name="list" width="22.5" height="22.5"/>
         <image name="map" width="22.5" height="22.5"/>
         <image name="reload" width="22.5" height="22.5"/>

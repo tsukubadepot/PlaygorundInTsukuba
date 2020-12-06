@@ -34,7 +34,7 @@ extension MainTabBarController: UITableViewDataSource {
             return parkModel.filterdParks.count
             
         case 2:
-            return parkModel.likedParks.count
+            return parkModel.likedParks.count == 0 ? 1 : parkModel.likedParks.count
             
         default:
             return 0
@@ -42,6 +42,11 @@ extension MainTabBarController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // お気に入り登録がない場合は、「登録促進セル」を表示して終了
+        if self.selectedIndex == 2 && parkModel.likedParks.count == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath)
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ParkTableViewCell
         
         var park: ParkInfo!
@@ -84,6 +89,11 @@ extension MainTabBarController: UITableViewDataSource {
 extension MainTabBarController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        // お気に入りがない場合はここで終了
+        if self.selectedIndex == 2 && parkModel.likedParks.count == 0  {
+            return
+        }
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
   
