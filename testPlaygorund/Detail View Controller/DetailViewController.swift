@@ -233,7 +233,7 @@ class DetailViewController: UIViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         let descriptionText = park.comments.description.isEmpty ? "コメント未入力" : park.comments.description
 
-        paragraphStyle.lineSpacing = 10.0
+        paragraphStyle.lineSpacing = 5.0
         paragraphStyle.alignment = .natural
         attributes.updateValue(paragraphStyle, forKey: .paragraphStyle)
         descriptionLabel.attributedText = NSAttributedString(string: descriptionText, attributes: attributes)
