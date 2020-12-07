@@ -15,6 +15,7 @@
 		BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7EC256E21C900609287 /* ListViewController.swift */; };
 		BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */; };
 		BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */; };
+		BF39D439257E14B20045026C /* Prototyping in Resources */ = {isa = PBXBuildFile; fileRef = BF39D438257E14B10045026C /* Prototyping */; };
 		BF76AB782578C14B000F62BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB772578C14B000F62BA /* SearchViewController.swift */; };
 		BF76AB7C2578C51A000F62BA /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */; };
 		BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */; };
@@ -53,6 +54,7 @@
 		BF0EA7EC256E21C900609287 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = "testPlaygorund/List View Controller/ListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
 		BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkTableViewCell.xib; sourceTree = "<group>"; };
+		BF39D438257E14B10045026C /* Prototyping */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Prototyping; sourceTree = "<group>"; };
 		BF76AB772578C14B000F62BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		BFB7BE7423F4275C00A89A3D = {
 			isa = PBXGroup;
 			children = (
+				BF39D438257E14B10045026C /* Prototyping */,
 				BFB7BE7F23F4275C00A89A3D /* testPlaygorund */,
 				BFB7BE7E23F4275C00A89A3D /* Products */,
 				6851BBEF3689EA6DD2DB460D /* Pods */,
@@ -335,6 +338,7 @@
 				BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */,
 				BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */,
 				BFB7BE8A23F4275F00A89A3D /* Assets.xcassets in Resources */,
+				BF39D439257E14B20045026C /* Prototyping in Resources */,
 				BFB7BE8823F4275C00A89A3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
