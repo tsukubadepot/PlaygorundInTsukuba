@@ -55,6 +55,7 @@
 		BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
 		BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkTableViewCell.xib; sourceTree = "<group>"; };
 		BF39D438257E14B10045026C /* Prototyping */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Prototyping; sourceTree = "<group>"; };
+		BF39D46A2580D10D0045026C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF76AB772578C14B000F62BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		BFB7BE7423F4275C00A89A3D = {
 			isa = PBXGroup;
 			children = (
+				BF39D46A2580D10D0045026C /* README.md */,
 				BF39D438257E14B10045026C /* Prototyping */,
 				BFB7BE7F23F4275C00A89A3D /* testPlaygorund */,
 				BFB7BE7E23F4275C00A89A3D /* Products */,
