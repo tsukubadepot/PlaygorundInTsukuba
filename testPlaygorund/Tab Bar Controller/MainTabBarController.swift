@@ -22,7 +22,90 @@ class MainTabBarController: UITabBarController {
         // NCMB の初期化
         NCMB.initialize(applicationKey: applicationkey, clientKey: clientkey)
         
+        // 匿名ログイン
+        login()
+        
         coordinateModel.setupLocationManager()
+    }
+    
+    private func login() {
+        // UUID取得
+        let uuid = UIDevice.current.identifierForVendor?.uuidString
+        print("uuid:\(uuid)")
+
+        // 匿名ログイン
+        NCMBUser.logInInBackground(userName: uuid!, password: uuid!) { result in
+            // 1. すでに登録してある場合には、最終ログイン日とログイン回数を更新する
+            // 2. 未登録の場合には、最終ログイン日とログイン回数を初期化して登録する
+            switch result {
+            case .success:
+                // すでに登録してある場合
+                print("ログインに成功しました")
+                
+                // 最終ログイン日時取得
+                let user = NCMBUser.currentUser!
+                let lastLoginDate: String = user["updateDate"]!
+                let count: Int = user["count"]!
+                
+                // ログイン日時の上書き
+                user["lastLoginDate"] = lastLoginDate
+                user["count"] = count + 1
+                
+                user.saveInBackground { updateResult in
+                    switch updateResult {
+                    case .success:
+                        // 保存成功時の処理
+                        print("最終ログイン日時の保存に成功しました。")
+                        break
+                    case let .failure(update_error):
+                        // 保存失敗時の処理
+                        print("最終ログイン日時の保存に失敗しました。エラーコード：\(update_error)")
+                    }
+                    
+                }
+
+            case let .failure(login_error):
+                // ログイン失敗時の処理
+                print("ログインに失敗しました。エラーコード：\(login_error)")
+                // 初回利用（会員未登録）の場合
+                if (login_error as? NCMBApiError)?.errorCode == .authenticationErrorWithIdPassIncorrect { // 401002：ID/Pass認証エラー
+                    let newUser = NCMBUser()
+                    newUser.userName = uuid
+                    newUser.password = uuid
+                    
+                    newUser.signUpInBackground {signupResult in
+                        switch signupResult {
+                        case .success:
+                            // 会員登録成功時の処理
+                            print("会員登録に成功しました。")
+                            
+                            /* mBaaSデータの保存 */
+                            let lastLoginDate = newUser["createDate"]! as Any
+                            
+                            // 最終ログイン日
+                            newUser["lastLoginDate"] = lastLoginDate
+                            // ログイン回数
+                            newUser["count"] = 1
+                            
+                            newUser.saveInBackground(callback: { newUpdateResult in
+                                switch newUpdateResult {
+                                case .success:
+                                    // 保存成功時の処理
+                                    print("最終ログイン日時の保存に成功しました。")
+                                    break
+                                case let .failure(newUpdate_error):
+                                    // 保存失敗時の処理
+                                    print("最終ログイン日時の保存に失敗しました。エラーコード：\(newUpdate_error)")
+                                }
+                            })
+                        case let .failure(signup_error):
+                            // 会員登録失敗時の処理
+                            print("会員登録に失敗しました。エラーコード：\(signup_error)")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
