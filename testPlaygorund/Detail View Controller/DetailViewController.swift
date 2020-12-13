@@ -98,6 +98,9 @@ class DetailViewController: UIViewController {
             mapView.layer.borderColor = UIColor.gray.cgColor
             // 全てのアノテーションを読み込み
             mapView.isLoadAllAnnotations = true
+            
+            // 標準でスクロール不可
+            mapView.isScrollEnabled = false
         }
     }
     
@@ -213,6 +216,7 @@ class DetailViewController: UIViewController {
     
     /// 周辺公園表示のスイッチが切り替わった場合
     @IBAction func showAnnotationSelected(_ sender: UISwitch) {
+        mapView.isScrollEnabled.toggle()
         showAnnotations()
     }
     
