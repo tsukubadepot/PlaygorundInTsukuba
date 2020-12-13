@@ -101,6 +101,21 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var showAllAnnotationsSwitch: UISwitch! {
+        didSet {
+            showAllAnnotationsSwitch.isOn = false
+        }
+    }
+    
+    // MARK: ナビアプリの起動と住所のコピー
+    @IBOutlet weak var openNavi: UIButton! {
+        didSet {
+            openNavi.layer.borderWidth = 1
+            openNavi.layer.borderColor = UIColor.gray.cgColor
+            openNavi.layer.cornerRadius = copyAddress.frame.height / 5
+        }
+    }
+    
     @IBOutlet weak var copyAddress: UIButton! {
         didSet {
             copyAddress.layer.borderWidth = 1
@@ -109,19 +124,14 @@ class DetailViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var showAllAnnotationsSwitch: UISwitch! {
-        didSet {
-            showAllAnnotationsSwitch.isOn = false
-        }
-    }
-    
-    
+    // MARK: コメントの送信
     @IBOutlet weak var sendCommentButton: UIButton! {
         didSet {
             sendCommentButton.layer.cornerRadius = sendCommentButton.frame.height / 2
         }
     }
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -173,6 +183,25 @@ class DetailViewController: UIViewController {
         }
 
         dismiss(animated: true, completion: nil)
+    }
+    
+    /// ナビアプリを起動
+    @IBAction func openNaviButton(_ sender: UIButton) {
+        // https://qiita.com/0ba/items/1a62e1158a64162dcfa2
+        let current = parkModelController!.coordinateModel.currentCoordinate
+        let urlString: String
+        
+        if UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!) {
+            // Google map で表示
+            urlString = "comgooglemaps://?saddr=\(current.latitude),\(current.longitude)&daddr=\(park.coordinate.latitude),\(park.coordinate.longitude)&zoom=14&directionsmode=driviing"
+        } else {
+            // Apple map で表示
+            urlString = "http://maps.apple.com/?saddr=\(current.latitude),\(current.longitude)&daddr=\(park.coordinate.latitude),\(park.coordinate.longitude)&dirflg=d"
+        }
+        
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url)
+        }
     }
     
     /// 住所をクリップボードにコピー
