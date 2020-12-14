@@ -16,7 +16,6 @@
 		BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7EC256E21C900609287 /* ListViewController.swift */; };
 		BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */; };
 		BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */; };
-		BF39D439257E14B20045026C /* Prototyping in Resources */ = {isa = PBXBuildFile; fileRef = BF39D438257E14B10045026C /* Prototyping */; };
 		BF76AB782578C14B000F62BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB772578C14B000F62BA /* SearchViewController.swift */; };
 		BF76AB7C2578C51A000F62BA /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */; };
 		BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */; };
@@ -30,7 +29,7 @@
 		BFB7BE8823F4275C00A89A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8623F4275C00A89A3D /* Main.storyboard */; };
 		BFB7BE8A23F4275F00A89A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8923F4275F00A89A3D /* Assets.xcassets */; };
 		BFB7BE8D23F4275F00A89A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */; };
-		BFB7BE9623F42F6400A89A3D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = BFB7BE9523F42F6400A89A3D /* SwiftPackageProductDependency */; };
+		BFB7BE9623F42F6400A89A3D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = BFB7BE9523F42F6400A89A3D /* CoreXLSX */; };
 		BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */; };
 		BFF8A5DF2570A425009EED2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5DE2570A425009EED2A /* MapViewController.swift */; };
 		BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */; };
@@ -53,7 +52,6 @@
 		BF0EA7EC256E21C900609287 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = "testPlaygorund/List View Controller/ListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BF0EA7F4256E85DF00609287 /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
 		BF0EA7F5256E85DF00609287 /* ParkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkTableViewCell.xib; sourceTree = "<group>"; };
-		BF39D438257E14B10045026C /* Prototyping */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Prototyping; sourceTree = "<group>"; };
 		BF39D46A2580D10D0045026C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF76AB772578C14B000F62BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF76AB7B2578C51A000F62BA /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
@@ -89,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB7BE9623F42F6400A89A3D /* BuildFile in Frameworks */,
+				BFB7BE9623F42F6400A89A3D /* CoreXLSX in Frameworks */,
 				9C06BCBBE87FF4055160E3E1 /* Pods_testPlaygorund.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				BF39D46A2580D10D0045026C /* README.md */,
-				BF39D438257E14B10045026C /* Prototyping */,
 				BFB7BE7F23F4275C00A89A3D /* testPlaygorund */,
 				BFB7BE7E23F4275C00A89A3D /* Products */,
 				6851BBEF3689EA6DD2DB460D /* Pods */,
@@ -287,7 +284,7 @@
 			);
 			name = testPlaygorund;
 			packageProductDependencies = (
-				BFB7BE9523F42F6400A89A3D /* SwiftPackageProductDependency */,
+				BFB7BE9523F42F6400A89A3D /* CoreXLSX */,
 			);
 			productName = testPlaygorund;
 			productReference = BFB7BE7D23F4275C00A89A3D /* Park in Tsukuba.app */;
@@ -319,7 +316,7 @@
 			);
 			mainGroup = BFB7BE7423F4275C00A89A3D;
 			packageReferences = (
-				BFB7BE9423F42F6400A89A3D /* RemoteSwiftPackageReference */,
+				BFB7BE9423F42F6400A89A3D /* XCRemoteSwiftPackageReference "CoreXLSX" */,
 			);
 			productRefGroup = BFB7BE7E23F4275C00A89A3D /* Products */;
 			projectDirPath = "";
@@ -340,7 +337,6 @@
 				BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */,
 				BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */,
 				BFB7BE8A23F4275F00A89A3D /* Assets.xcassets in Resources */,
-				BF39D439257E14B20045026C /* Prototyping in Resources */,
 				BFB7BE8823F4275C00A89A3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,14 +566,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
+				CURRENT_PROJECT_VERSION = 2.1.0;
 				DEVELOPMENT_TEAM = 872HCG8AJ3;
 				INFOPLIST_FILE = testPlaygorund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TsukubaDepot.net.testPlaygorund;
 				PRODUCT_NAME = "Park in Tsukuba";
 				SWIFT_VERSION = 5.0;
@@ -591,14 +587,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.0;
+				CURRENT_PROJECT_VERSION = 2.1.0;
 				DEVELOPMENT_TEAM = 872HCG8AJ3;
 				INFOPLIST_FILE = testPlaygorund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TsukubaDepot.net.testPlaygorund;
 				PRODUCT_NAME = "Park in Tsukuba";
 				SWIFT_VERSION = 5.0;
@@ -630,7 +626,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BFB7BE9423F42F6400A89A3D /* RemoteSwiftPackageReference */ = {
+		BFB7BE9423F42F6400A89A3D /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MaxDesiatov/CoreXLSX.git";
 			requirement = {
@@ -641,9 +637,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BFB7BE9523F42F6400A89A3D /* SwiftPackageProductDependency */ = {
+		BFB7BE9523F42F6400A89A3D /* CoreXLSX */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BFB7BE9423F42F6400A89A3D /* RemoteSwiftPackageReference */;
+			package = BFB7BE9423F42F6400A89A3D /* XCRemoteSwiftPackageReference "CoreXLSX" */;
 			productName = CoreXLSX;
 		};
 /* End XCSwiftPackageProductDependency section */
