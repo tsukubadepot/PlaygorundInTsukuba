@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+import AlamofireImage
 
 extension UIImageView {
     func loadImage(forName name: String) {
@@ -15,29 +15,19 @@ extension UIImageView {
             self.image = UIImage(named: "notvisit")
         } else {
             let url = URL(string: ncmbFileBaseURL + name)
-            let processor = DownsamplingImageProcessor(size: self.bounds.size)
+
+            // NCMB が MIME Type を text/plain すことへの対策
+            ImageResponseSerializer.addAcceptableImageContentTypes(["text/plain"])
             
-            
-            self.kf.indicatorType = .activity
-            self.kf.setImage(
-                with: url,
-                placeholder: UIImage(named: "loading-temp"),
-                options: [
-                    .processor(processor),
-                    .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(1)),
-                    .cacheOriginalImage
-                ], completionHandler:
-                    {
-                        result in
-                        switch result {
-                        case .success(let value):
-                            print("Task done for: \(value.source.url?.absoluteString ?? "")")
-                        case .failure(let error):
-                            print("Job failed: \(error.localizedDescription)")
-                        }
-                    })
-            
+            let filter = AspectScaledToFillSizeFilter(size: self.bounds.size)
+
+            // FSPagerView の UIImage が (0, 0) を返した時の対策。
+            // (0, 0) の場合はスケールしない
+            if self.bounds.size.equalTo(.zero) {
+                self.af.setImage(withURL: url!, cacheKey: name, placeholderImage: UIImage(named: "loading-temp"), imageTransition: .crossDissolve(0.5))
+            } else {
+                self.af.setImage(withURL: url!, cacheKey: name, placeholderImage: UIImage(named: "loading-temp"), filter: filter, imageTransition: .crossDissolve(0.5))
+            }
         }
     }
 

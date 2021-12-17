@@ -8,7 +8,8 @@
 
 import UIKit
 import NCMB
-import Kingfisher
+//import Kingfisher
+import AlamofireImage
 import MapKit
 import FSPagerView
 

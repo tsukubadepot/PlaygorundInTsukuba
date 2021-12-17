@@ -8,7 +8,6 @@
 
 import UIKit
 import MessageUI
-import Kingfisher
 import MapKit
 import PKHUD
 
