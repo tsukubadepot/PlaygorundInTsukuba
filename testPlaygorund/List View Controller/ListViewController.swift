@@ -58,6 +58,11 @@ class ListViewController: UIViewController {
 
             // 検索条件に従って検索を実行
             self.parkModelController?.parkModel.filter()
+            
+            // TODO: - 現在地でソート
+            if let currentCoordinate = self.parkModelController?.coordinateModel.currentCoordinate {
+                self.parkModelController?.parkModel.sort(from: currentCoordinate)
+            }
 
             self.parkListTableView.reloadData()
         } errorHandler: { error in

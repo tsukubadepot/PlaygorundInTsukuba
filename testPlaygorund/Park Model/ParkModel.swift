@@ -187,6 +187,25 @@ class ParkModel {
         return filterdParks[index].name
     }
     
+    
+    /// 指定された座標からの距離でソートする
+    /// - Parameter from: 測定基準となる座標
+    func sort(from: CLLocationCoordinate2D) {
+        // 検索条件が指定されていなかった場合
+        if facilitiesQuery.isEmpty && playEquipmentsQuery.isEmpty {
+            filterdParks = parks
+        }
+        
+        let currentLocation = CLLocation(latitude: from.latitude, longitude: from.longitude)
+        
+        filterdParks.sort { p1, p2 -> Bool in
+            let p1Location = CLLocation(latitude: p1.coordinate.latitude, longitude: p1.coordinate.longitude)
+            let p2Location = CLLocation(latitude: p2.coordinate.latitude, longitude: p2.coordinate.longitude)
+            
+            return currentLocation.distance(from: p1Location) < currentLocation.distance(from: p2Location)
+        }
+    }
+    
     func filter() {
         // 設備で検索
         if facilitiesQuery.isEmpty {

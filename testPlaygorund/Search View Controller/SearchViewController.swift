@@ -161,6 +161,11 @@ class SearchViewController: UIViewController {
         parkModelController.parkModel.playEquipmentsQuery.removeAll()
         parkModelController.parkModel.filter()
         
+        // TODO: - 現在地でソート
+        if let currentCoordinate = self.parkModelController?.coordinateModel.currentCoordinate {
+            self.parkModelController?.parkModel.sort(from: currentCoordinate)
+        }
+        
         updateSearchButtonStatus()
         
         searchTableView.reloadData()
@@ -189,6 +194,12 @@ class SearchViewController: UIViewController {
         }
 
         parkModelController.parkModel.filter()
+        
+        // TODO: - 現在地でソート
+        if let currentCoordinate = self.parkModelController?.coordinateModel.currentCoordinate {
+            self.parkModelController?.parkModel.sort(from: currentCoordinate)
+        }
+        
         
         updateSearchButtonStatus()
     }

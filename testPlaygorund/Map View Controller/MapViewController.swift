@@ -133,6 +133,8 @@ class MapViewController: UIViewController {
     @IBAction func moveToCurrentLocation(_ sender: UIButton) {
         if let currentCoordinate = parkModelController?.coordinateModel.currentCoordinate {
             annotationMapView.setCenter(currentCoordinate, animated: true)
+            
+            // TODO: Pager の中心画像が最寄りの公園になるように設置する必要がある。
         }
     }
 }

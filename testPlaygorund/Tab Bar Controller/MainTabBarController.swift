@@ -30,11 +30,14 @@ class MainTabBarController: UITabBarController {
     
     private func login() {
         // UUID取得
-        let uuid = UIDevice.current.identifierForVendor?.uuidString
+        guard let uuid = UIDevice.current.identifierForVendor?.uuidString else {
+            abort()
+        }
+        
         print("uuid:\(uuid)")
 
         // 匿名ログイン
-        NCMBUser.logInInBackground(userName: uuid!, password: uuid!) { result in
+        NCMBUser.logInInBackground(userName: uuid, password: uuid) { result in
             // 1. すでに登録してある場合には、最終ログイン日とログイン回数を更新する
             // 2. 未登録の場合には、最終ログイン日とログイン回数を初期化して登録する
             switch result {

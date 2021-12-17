@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C06BCBBE87FF4055160E3E1 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B0C15D98878CF0AD8F09E6 /* Pods_testPlaygorund.framework */; };
 		BF0EA788256DE6B300609287 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA787256DE6B300609287 /* APIKey.swift */; };
 		BF0EA7A6256DEE0000609287 /* MainV2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA7A5256DEE0000609287 /* MainV2.storyboard */; };
 		BF0EA7B9256DF19400609287 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7B8256DF19400609287 /* MainTabBarController.swift */; };
@@ -21,16 +20,11 @@
 		BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */; };
 		BF76ABB125791BD4000F62BA /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76ABB025791BD4000F62BA /* PresentationController.swift */; };
 		BF76ABB525791C31000F62BA /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76ABB425791C31000F62BA /* SlideAnimator.swift */; };
-		BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2023FBFE1400E17320 /* StringExtensions.swift */; };
-		BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA19E2223FBFFF600E17320 /* XLSHandling.swift */; };
 		BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */; };
 		BFB7BE8323F4275C00A89A3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE8223F4275C00A89A3D /* SceneDelegate.swift */; };
-		BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE8423F4275C00A89A3D /* ViewController.swift */; };
-		BFB7BE8823F4275C00A89A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8623F4275C00A89A3D /* Main.storyboard */; };
 		BFB7BE8A23F4275F00A89A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8923F4275F00A89A3D /* Assets.xcassets */; };
 		BFB7BE8D23F4275F00A89A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */; };
-		BFB7BE9623F42F6400A89A3D /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = BFB7BE9523F42F6400A89A3D /* CoreXLSX */; };
-		BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */; };
+		BFD6D215258A421300C121DB /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6D214258A421300C121DB /* CLLocationExtension.swift */; };
 		BFF8A5DF2570A425009EED2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5DE2570A425009EED2A /* MapViewController.swift */; };
 		BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */; };
 		BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A62C25710723009EED2A /* DetailViewController.swift */; };
@@ -39,11 +33,13 @@
 		BFF8A6382572FCDF009EED2A /* PlayEquipmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A6372572FCDE009EED2A /* PlayEquipmentTableViewCell.swift */; };
 		BFF8A669257507B7009EED2A /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A668257507B7009EED2A /* LocationModel.swift */; };
 		BFF8A66E2575CF6D009EED2A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF8A66D2575CF6D009EED2A /* FavoriteViewController.swift */; };
+		F79C9CE3A268EC0E41775703 /* Pods_testPlaygorund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746F3AD27D82985F75C659CB /* Pods_testPlaygorund.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		327BE6FCBB81C0C3980BDC19 /* Pods-testPlaygorund.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.release.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.release.xcconfig"; sourceTree = "<group>"; };
-		A4F93BB1054F3F8C13215869 /* Pods-testPlaygorund.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.debug.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.debug.xcconfig"; sourceTree = "<group>"; };
+		4732CC77A28EBA9B06F617D3 /* Pods-testPlaygorund.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.debug.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.debug.xcconfig"; sourceTree = "<group>"; };
+		6637A6C431558ACF88010FD8 /* Pods-testPlaygorund.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlaygorund.release.xcconfig"; path = "Target Support Files/Pods-testPlaygorund/Pods-testPlaygorund.release.xcconfig"; sourceTree = "<group>"; };
+		746F3AD27D82985F75C659CB /* Pods_testPlaygorund.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlaygorund.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0EA787256DE6B300609287 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		BF0EA7A5256DEE0000609287 /* MainV2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainV2.storyboard; sourceTree = "<group>"; };
 		BF0EA7B8256DF19400609287 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -58,19 +54,14 @@
 		BF76AB7E2578C531000F62BA /* SearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
 		BF76ABB025791BD4000F62BA /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		BF76ABB425791C31000F62BA /* SlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
-		BFA19E2023FBFE1400E17320 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "testPlaygorund/Old files/StringExtensions.swift"; sourceTree = SOURCE_ROOT; };
-		BFA19E2223FBFFF600E17320 /* XLSHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XLSHandling.swift; path = "testPlaygorund/Old files/XLSHandling.swift"; sourceTree = SOURCE_ROOT; };
 		BFB7BE7D23F4275C00A89A3D /* Park in Tsukuba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Park in Tsukuba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB7BE8023F4275C00A89A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB7BE8223F4275C00A89A3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BFB7BE8423F4275C00A89A3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BFB7BE8723F4275C00A89A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFB7BE8923F4275F00A89A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFB7BE8C23F4275F00A89A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFB7BE8E23F4275F00A89A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaygroundDetailViewController.swift; path = "testPlaygorund/Old files/PlaygroundDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
-		BFB7BE9923F4737000A89A3D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		BFB7BE9A23F4737000A89A3D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BFD6D214258A421300C121DB /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
 		BFF8A5DE2570A425009EED2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BFF8A5E52570A490009EED2A /* AnnotationMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationMapView.swift; sourceTree = "<group>"; };
 		BFF8A62C25710723009EED2A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +70,6 @@
 		BFF8A6372572FCDE009EED2A /* PlayEquipmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayEquipmentTableViewCell.swift; sourceTree = "<group>"; };
 		BFF8A668257507B7009EED2A /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		BFF8A66D2575CF6D009EED2A /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		E9B0C15D98878CF0AD8F09E6 /* Pods_testPlaygorund.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlaygorund.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,41 +77,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB7BE9623F42F6400A89A3D /* CoreXLSX in Frameworks */,
-				9C06BCBBE87FF4055160E3E1 /* Pods_testPlaygorund.framework in Frameworks */,
+				F79C9CE3A268EC0E41775703 /* Pods_testPlaygorund.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		476DCCA6C84706CCCE956545 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E9B0C15D98878CF0AD8F09E6 /* Pods_testPlaygorund.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6851BBEF3689EA6DD2DB460D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A4F93BB1054F3F8C13215869 /* Pods-testPlaygorund.debug.xcconfig */,
-				327BE6FCBB81C0C3980BDC19 /* Pods-testPlaygorund.release.xcconfig */,
+				4732CC77A28EBA9B06F617D3 /* Pods-testPlaygorund.debug.xcconfig */,
+				6637A6C431558ACF88010FD8 /* Pods-testPlaygorund.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BF0EA7A3256DED4F00609287 /* Old files */ = {
+		8C60EB6DADCC503B604184D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BFA19E2223FBFFF600E17320 /* XLSHandling.swift */,
-				BFB7BE9723F4355E00A89A3D /* PlaygroundDetailViewController.swift */,
-				BFA19E2023FBFE1400E17320 /* StringExtensions.swift */,
-				BFB7BE8423F4275C00A89A3D /* ViewController.swift */,
-				BFB7BE8623F4275C00A89A3D /* Main.storyboard */,
+				746F3AD27D82985F75C659CB /* Pods_testPlaygorund.framework */,
 			);
-			path = "Old files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BF0EA7BC256E1A7D00609287 /* Tab Bar Controller */ = {
@@ -177,7 +154,7 @@
 				BFB7BE7F23F4275C00A89A3D /* testPlaygorund */,
 				BFB7BE7E23F4275C00A89A3D /* Products */,
 				6851BBEF3689EA6DD2DB460D /* Pods */,
-				476DCCA6C84706CCCE956545 /* Frameworks */,
+				8C60EB6DADCC503B604184D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,7 +187,6 @@
 				BFB7BE8923F4275F00A89A3D /* Assets.xcassets */,
 				BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */,
 				BFB7BE8E23F4275F00A89A3D /* Info.plist */,
-				BF0EA7A3256DED4F00609287 /* Old files */,
 			);
 			path = testPlaygorund;
 			sourceTree = "<group>";
@@ -237,6 +213,7 @@
 			children = (
 				BFF8A6302571198D009EED2A /* UIImageViewExtension.swift */,
 				BFF8A63425712CA0009EED2A /* CLLocationCoordinate2DExtension.swift */,
+				BFD6D214258A421300C121DB /* CLLocationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,20 +249,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFB7BE9123F4275F00A89A3D /* Build configuration list for PBXNativeTarget "testPlaygorund" */;
 			buildPhases = (
-				006D780AB59E31E97030FCE2 /* [CP] Check Pods Manifest.lock */,
+				2096804DF5145ACE2937BFE9 /* [CP] Check Pods Manifest.lock */,
 				BFB7BE7923F4275C00A89A3D /* Sources */,
 				BFB7BE7A23F4275C00A89A3D /* Frameworks */,
 				BFB7BE7B23F4275C00A89A3D /* Resources */,
-				108B8C2B5636185D9D1B577F /* [CP] Embed Pods Frameworks */,
+				D7D72B85DA239D947C56957C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = testPlaygorund;
-			packageProductDependencies = (
-				BFB7BE9523F42F6400A89A3D /* CoreXLSX */,
-			);
 			productName = testPlaygorund;
 			productReference = BFB7BE7D23F4275C00A89A3D /* Park in Tsukuba.app */;
 			productType = "com.apple.product-type.application";
@@ -315,9 +289,6 @@
 				ja,
 			);
 			mainGroup = BFB7BE7423F4275C00A89A3D;
-			packageReferences = (
-				BFB7BE9423F42F6400A89A3D /* XCRemoteSwiftPackageReference "CoreXLSX" */,
-			);
 			productRefGroup = BFB7BE7E23F4275C00A89A3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,14 +308,13 @@
 				BF0EA7F7256E85DF00609287 /* ParkTableViewCell.xib in Resources */,
 				BF76AB7F2578C531000F62BA /* SearchHeaderView.xib in Resources */,
 				BFB7BE8A23F4275F00A89A3D /* Assets.xcassets in Resources */,
-				BFB7BE8823F4275C00A89A3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		006D780AB59E31E97030FCE2 /* [CP] Check Pods Manifest.lock */ = {
+		2096804DF5145ACE2937BFE9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,7 +336,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		108B8C2B5636185D9D1B577F /* [CP] Embed Pods Frameworks */ = {
+		D7D72B85DA239D947C56957C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -390,11 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA19E2323FBFFF600E17320 /* XLSHandling.swift in Sources */,
 				BF0EA7E9256E1CC400609287 /* ParkModel.swift in Sources */,
 				BF76ABB525791C31000F62BA /* SlideAnimator.swift in Sources */,
 				BFF8A5E62570A490009EED2A /* AnnotationMapView.swift in Sources */,
 				BFF8A63525712CA0009EED2A /* CLLocationCoordinate2DExtension.swift in Sources */,
+				BFD6D215258A421300C121DB /* CLLocationExtension.swift in Sources */,
 				BF0EA7BF256E1AB300609287 /* ParkInfo.swift in Sources */,
 				BF0EA7F6256E85DF00609287 /* ParkTableViewCell.swift in Sources */,
 				BF0EA788256DE6B300609287 /* APIKey.swift in Sources */,
@@ -404,13 +374,10 @@
 				BF0EA7ED256E21C900609287 /* ListViewController.swift in Sources */,
 				BFF8A669257507B7009EED2A /* LocationModel.swift in Sources */,
 				BFF8A6382572FCDF009EED2A /* PlayEquipmentTableViewCell.swift in Sources */,
-				BFB7BE8523F4275C00A89A3D /* ViewController.swift in Sources */,
 				BFB7BE8123F4275C00A89A3D /* AppDelegate.swift in Sources */,
 				BFF8A66E2575CF6D009EED2A /* FavoriteViewController.swift in Sources */,
 				BF76AB782578C14B000F62BA /* SearchViewController.swift in Sources */,
-				BFA19E2123FBFE1400E17320 /* StringExtensions.swift in Sources */,
 				BFF8A62D25710723009EED2A /* DetailViewController.swift in Sources */,
-				BFB7BE9823F4355E00A89A3D /* PlaygroundDetailViewController.swift in Sources */,
 				BF76ABB125791BD4000F62BA /* PresentationController.swift in Sources */,
 				BFF8A6312571198D009EED2A /* UIImageViewExtension.swift in Sources */,
 				BFB7BE8323F4275C00A89A3D /* SceneDelegate.swift in Sources */,
@@ -420,15 +387,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BFB7BE8623F4275C00A89A3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFB7BE8723F4275C00A89A3D /* Base */,
-				BFB7BE9923F4737000A89A3D /* ja */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BFB7BE8B23F4275F00A89A3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -493,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -549,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -562,18 +520,18 @@
 		};
 		BFB7BE9223F4275F00A89A3D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4F93BB1054F3F8C13215869 /* Pods-testPlaygorund.debug.xcconfig */;
+			baseConfigurationReference = 4732CC77A28EBA9B06F617D3 /* Pods-testPlaygorund.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.1;
+				CURRENT_PROJECT_VERSION = 2.1.2;
 				DEVELOPMENT_TEAM = 872HCG8AJ3;
 				INFOPLIST_FILE = testPlaygorund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = TsukubaDepot.net.testPlaygorund;
 				PRODUCT_NAME = "Park in Tsukuba";
 				SWIFT_VERSION = 5.0;
@@ -583,18 +541,18 @@
 		};
 		BFB7BE9323F4275F00A89A3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 327BE6FCBB81C0C3980BDC19 /* Pods-testPlaygorund.release.xcconfig */;
+			baseConfigurationReference = 6637A6C431558ACF88010FD8 /* Pods-testPlaygorund.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.1.1;
+				CURRENT_PROJECT_VERSION = 2.1.2;
 				DEVELOPMENT_TEAM = 872HCG8AJ3;
 				INFOPLIST_FILE = testPlaygorund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = TsukubaDepot.net.testPlaygorund;
 				PRODUCT_NAME = "Park in Tsukuba";
 				SWIFT_VERSION = 5.0;
@@ -624,25 +582,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BFB7BE9423F42F6400A89A3D /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MaxDesiatov/CoreXLSX.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BFB7BE9523F42F6400A89A3D /* CoreXLSX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BFB7BE9423F42F6400A89A3D /* XCRemoteSwiftPackageReference "CoreXLSX" */;
-			productName = CoreXLSX;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFB7BE7523F4275C00A89A3D /* Project object */;
 }
